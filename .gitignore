@@ -1,3 +1,7 @@
 .env
 .pnpm-store
 node_modules
+
+# VitePress
+docs/.vitepress/dist
+docs/.vitepress/cache

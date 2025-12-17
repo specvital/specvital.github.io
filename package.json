@@ -8,11 +8,15 @@
   },
   "license": "MIT",
   "scripts": {
-    "prepare": "husky"
+    "prepare": "husky",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
   },
   "devDependencies": {
     "husky": "9.1.7",
     "lint-staged": "16.2.7",
-    "prettier": "3.6.2"
+    "prettier": "3.6.2",
+    "vitepress": "1.6.4"
   }
 }
