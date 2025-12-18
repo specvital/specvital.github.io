@@ -57,6 +57,10 @@ Specvital 개발 중 내린 아키텍처 결정에 대한 문서.
 
 - [백엔드 언어로 Go 선택](./adr/web/01-go-backend-language.md)
 
+### [기술 레이더](./tech-radar.md)
+
+플랫폼 전반의 기술 채택 현황 및 평가 기준.
+
 ### [아키텍처 개요](./architecture.md)
 
 상위 수준의 시스템 아키텍처 문서.

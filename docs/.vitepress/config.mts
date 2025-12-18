@@ -29,6 +29,7 @@ export default defineConfig({
               items: [
                 { text: "Home", link: "/en/" },
                 { text: "Architecture", link: "/en/architecture" },
+                { text: "Tech Radar", link: "/en/tech-radar" },
               ],
             },
             {
@@ -112,6 +113,7 @@ export default defineConfig({
               items: [
                 { text: "홈", link: "/ko/" },
                 { text: "아키텍처", link: "/ko/architecture" },
+                { text: "기술 레이더", link: "/ko/tech-radar" },
               ],
             },
             {

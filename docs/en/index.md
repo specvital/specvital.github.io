@@ -57,6 +57,10 @@ Documentation of architectural decisions made during the development of Specvita
 
 - [Go as Backend Language](./adr/web/01-go-backend-language.md)
 
+### [Tech Radar](./tech-radar.md)
+
+Technology adoption status and evaluation criteria across the platform.
+
 ### [Architecture Overview](./architecture.md)
 
 High-level system architecture documentation.
