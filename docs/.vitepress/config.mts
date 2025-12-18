@@ -73,6 +73,14 @@ export default defineConfig({
                     { text: "Scheduled Re-collection", link: "/en/adr/collector/01-scheduled-recollection" },
                   ],
                 },
+                {
+                  text: "Web",
+                  collapsed: false,
+                  items: [
+                    { text: "Overview", link: "/en/adr/web/" },
+                    { text: "Go Backend Language", link: "/en/adr/web/01-go-backend-language" },
+                  ],
+                },
               ],
             },
           ],
@@ -138,6 +146,14 @@ export default defineConfig({
                   items: [
                     { text: "개요", link: "/ko/adr/collector/" },
                     { text: "스케줄 기반 재수집", link: "/ko/adr/collector/01-scheduled-recollection" },
+                  ],
+                },
+                {
+                  text: "Web",
+                  collapsed: false,
+                  items: [
+                    { text: "개요", link: "/ko/adr/web/" },
+                    { text: "Go 백엔드 언어", link: "/ko/adr/web/01-go-backend-language" },
                   ],
                 },
               ],

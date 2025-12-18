@@ -45,6 +45,10 @@ Specvital 개발 중 내린 아키텍처 결정에 대한 문서입니다.
 
 - [스케줄 기반 재수집](./adr/collector/01-scheduled-recollection.md)
 
+**[Web](./adr/web/)**
+
+- [백엔드 언어로 Go 선택](./adr/web/01-go-backend-language.md)
+
 ### [아키텍처 개요](./architecture.md)
 
 상위 수준의 시스템 아키텍처 문서입니다.

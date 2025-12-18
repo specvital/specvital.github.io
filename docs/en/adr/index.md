@@ -76,6 +76,12 @@ XX-brief-decision-title.md
 | --- | -------------------------------------------------------------------------------- | ------------ | ---------- |
 | 01  | [Scheduled Re-collection Architecture](./collector/01-scheduled-recollection.md) | Architecture | 2024-12-18 |
 
+### Web Repository
+
+| #   | Title                                                     | Area       | Date       |
+| --- | --------------------------------------------------------- | ---------- | ---------- |
+| 01  | [Go as Backend Language](./web/01-go-backend-language.md) | Tech Stack | 2024-12-18 |
+
 ## Process
 
 1. **Create**: Copy [template.md](./template.md) → `XX-title.md`

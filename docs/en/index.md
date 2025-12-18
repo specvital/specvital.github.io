@@ -45,6 +45,10 @@ Documentation of architectural decisions made during the development of Specvita
 
 - [Scheduled Re-collection](./adr/collector/01-scheduled-recollection.md)
 
+**[Web](./adr/web/)**
+
+- [Go as Backend Language](./adr/web/01-go-backend-language.md)
+
 ### [Architecture Overview](./architecture.md)
 
 High-level system architecture documentation.
