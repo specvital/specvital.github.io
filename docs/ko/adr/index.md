@@ -72,9 +72,17 @@ XX-brief-decision-title.md
 
 ### Collector 리포지토리
 
-| #   | 제목                                                                    | 영역         | 날짜       |
-| --- | ----------------------------------------------------------------------- | ------------ | ---------- |
-| 01  | [스케줄 기반 재수집 아키텍처](./collector/01-scheduled-recollection.md) | Architecture | 2024-12-18 |
+| #   | 제목                                                                                          | 영역          | 날짜       |
+| --- | --------------------------------------------------------------------------------------------- | ------------- | ---------- |
+| 01  | [스케줄 기반 재수집 아키텍처](./collector/01-scheduled-recollection.md)                       | Architecture  | 2024-12-18 |
+| 02  | [Clean Architecture 레이어 도입](./collector/02-clean-architecture-layers.md)                 | Architecture  | 2024-12-18 |
+| 03  | [Graceful Shutdown 및 Context 기반 생명주기 관리](./collector/03-graceful-shutdown.md)        | Architecture  | 2024-12-18 |
+| 04  | [분산 락 기반 스케줄러 동시성 제어](./collector/04-distributed-lock-scheduler-concurrency.md) | Concurrency   | 2024-12-18 |
+| 05  | [OAuth 토큰 Graceful Degradation](./collector/05-oauth-token-graceful-degradation.md)         | Reliability   | 2024-12-18 |
+| 06  | [Asynq 로깅 slog 어댑터](./collector/06-asynq-slog-adapter.md)                                | Observability | 2024-12-18 |
+| 07  | [Worker-Scheduler 프로세스 분리](./collector/07-worker-scheduler-separation.md)               | Architecture  | 2024-12-18 |
+| 08  | [Semaphore 기반 Clone 동시성 제어](./collector/08-semaphore-clone-concurrency.md)             | Concurrency   | 2024-12-18 |
+| 09  | [Repository 패턴 데이터 접근 추상화](./collector/09-repository-pattern.md)                    | Architecture  | 2024-12-18 |
 
 ### Web 리포지토리
 
