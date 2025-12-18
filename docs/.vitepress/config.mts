@@ -59,7 +59,7 @@ export default defineConfig({
                 { text: "Shared Infrastructure", link: "/en/adr/08-shared-infrastructure" },
                 {
                   text: "Core",
-                  collapsed: false,
+                  collapsed: true,
                   items: [
                     { text: "Overview", link: "/en/adr/core/" },
                     { text: "Core Library Separation", link: "/en/adr/core/01-core-library-separation" },
@@ -67,7 +67,7 @@ export default defineConfig({
                 },
                 {
                   text: "Collector",
-                  collapsed: false,
+                  collapsed: true,
                   items: [
                     { text: "Overview", link: "/en/adr/collector/" },
                     { text: "Scheduled Re-collection", link: "/en/adr/collector/01-scheduled-recollection" },
@@ -83,7 +83,7 @@ export default defineConfig({
                 },
                 {
                   text: "Web",
-                  collapsed: false,
+                  collapsed: true,
                   items: [
                     { text: "Overview", link: "/en/adr/web/" },
                     { text: "Go Backend Language", link: "/en/adr/web/01-go-backend-language" },
@@ -142,7 +142,7 @@ export default defineConfig({
                 { text: "공유 인프라", link: "/ko/adr/08-shared-infrastructure" },
                 {
                   text: "Core",
-                  collapsed: false,
+                  collapsed: true,
                   items: [
                     { text: "개요", link: "/ko/adr/core/" },
                     { text: "코어 라이브러리 분리", link: "/ko/adr/core/01-core-library-separation" },
@@ -150,7 +150,7 @@ export default defineConfig({
                 },
                 {
                   text: "Collector",
-                  collapsed: false,
+                  collapsed: true,
                   items: [
                     { text: "개요", link: "/ko/adr/collector/" },
                     { text: "스케줄 기반 재수집", link: "/ko/adr/collector/01-scheduled-recollection" },
@@ -166,7 +166,7 @@ export default defineConfig({
                 },
                 {
                   text: "Web",
-                  collapsed: false,
+                  collapsed: true,
                   items: [
                     { text: "개요", link: "/ko/adr/web/" },
                     { text: "Go 백엔드 언어", link: "/ko/adr/web/01-go-backend-language" },
