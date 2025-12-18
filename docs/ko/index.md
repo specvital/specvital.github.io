@@ -4,7 +4,7 @@ title: 홈
 
 # Specvital 문서
 
-> 🇺🇸 [English Documentation](/en/)
+> 🇺🇸 [English Version](/en/)
 
 Specvital 문서에 오신 것을 환영합니다. Specvital은 코드 리뷰 프로세스를 개선하기 위해 설계된 오픈소스 테스트 커버리지 인사이트 도구입니다.
 

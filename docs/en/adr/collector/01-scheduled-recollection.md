@@ -4,7 +4,7 @@ title: Scheduled Re-collection
 
 # ADR-01: Scheduled Re-collection Architecture
 
-> :kr: [한국어 버전](/ko/adr/collector/01-scheduled-recollection.md)
+> 🇰🇷 [한국어 버전](/ko/adr/collector/01-scheduled-recollection.md)
 
 | Date       | Author       | Repos     |
 | ---------- | ------------ | --------- |

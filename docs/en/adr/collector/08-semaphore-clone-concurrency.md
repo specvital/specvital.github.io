@@ -4,7 +4,7 @@ title: Semaphore-Based Clone Concurrency
 
 # ADR-08: Semaphore-Based Clone Concurrency Control
 
-> :kr: [한국어 버전](/ko/adr/collector/08-semaphore-clone-concurrency.md)
+> 🇰🇷 [한국어 버전](/ko/adr/collector/08-semaphore-clone-concurrency.md)
 
 | Date       | Author       | Repos     |
 | ---------- | ------------ | --------- |

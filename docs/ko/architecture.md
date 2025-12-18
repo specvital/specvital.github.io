@@ -4,7 +4,7 @@ title: 아키텍처
 
 # SpecVital Architecture
 
-> 🇺🇸 [English Version](/en/architecture)
+> 🇺🇸 [English Version](/en/architecture.md)
 
 ## Overview
 

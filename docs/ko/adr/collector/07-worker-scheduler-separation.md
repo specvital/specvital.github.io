@@ -4,7 +4,7 @@ title: Worker-Scheduler 분리
 
 # ADR-07: Worker-Scheduler 프로세스 분리
 
-> :us: [English Version](/en/adr/collector/07-worker-scheduler-separation.md)
+> 🇺🇸 [English Version](/en/adr/collector/07-worker-scheduler-separation.md)
 
 | 날짜       | 작성자       | 리포지토리 |
 | ---------- | ------------ | ---------- |

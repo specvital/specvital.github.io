@@ -4,7 +4,7 @@ title: Go Backend Language
 
 # ADR-01: Go as Backend Language
 
-> :kr: [한국어 버전](/ko/adr/web/01-go-backend-language.md)
+> 🇰🇷 [한국어 버전](/ko/adr/web/01-go-backend-language.md)
 
 | Date       | Author       | Repos |
 | ---------- | ------------ | ----- |

@@ -4,7 +4,7 @@ title: Worker-Scheduler Separation
 
 # ADR-07: Worker-Scheduler Process Separation
 
-> :kr: [한국어 버전](/ko/adr/collector/07-worker-scheduler-separation.md)
+> 🇰🇷 [한국어 버전](/ko/adr/collector/07-worker-scheduler-separation.md)
 
 | Date       | Author       | Repos     |
 | ---------- | ------------ | --------- |

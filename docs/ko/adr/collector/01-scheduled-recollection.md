@@ -4,7 +4,7 @@ title: 스케줄 기반 재수집
 
 # ADR-01: 스케줄 기반 재수집 아키텍처
 
-> :us: [English Version](/en/adr/collector/01-scheduled-recollection.md)
+> 🇺🇸 [English Version](/en/adr/collector/01-scheduled-recollection.md)
 
 | 날짜       | 작성자       | 리포지토리 |
 | ---------- | ------------ | ---------- |

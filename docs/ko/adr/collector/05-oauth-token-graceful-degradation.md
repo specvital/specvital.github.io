@@ -4,7 +4,7 @@ title: OAuth Token Graceful Degradation
 
 # ADR-05: OAuth 토큰 Graceful Degradation
 
-> :us: [English Version](/en/adr/collector/05-oauth-token-graceful-degradation.md)
+> 🇺🇸 [English Version](/en/adr/collector/05-oauth-token-graceful-degradation.md)
 
 | 날짜       | 작성자       | 리포지토리 |
 | ---------- | ------------ | ---------- |

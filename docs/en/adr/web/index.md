@@ -4,7 +4,7 @@ title: Web ADR
 
 # Web Repository ADR
 
-> :kr: [한국어 버전](/ko/adr/web/)
+> 🇰🇷 [한국어 버전](/ko/adr/web/)
 
 Architecture Decision Records for the [specvital/web](https://github.com/specvital/web) repository (Web Platform).
 

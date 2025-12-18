@@ -4,7 +4,7 @@ title: 분산 락 기반 스케줄러 동시성 제어
 
 # ADR-04: 분산 락 기반 스케줄러 동시성 제어
 
-> :us: [English Version](/en/adr/collector/04-distributed-lock-scheduler-concurrency.md)
+> 🇺🇸 [English Version](/en/adr/collector/04-distributed-lock-scheduler-concurrency.md)
 
 | 날짜       | 작성자       | 리포지토리 |
 | ---------- | ------------ | ---------- |

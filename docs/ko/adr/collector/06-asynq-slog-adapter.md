@@ -4,7 +4,7 @@ title: Asynq slog 어댑터
 
 # ADR-06: Asynq 로깅 slog 어댑터
 
-> :us: [English Version](/en/adr/collector/06-asynq-slog-adapter.md)
+> 🇺🇸 [English Version](/en/adr/collector/06-asynq-slog-adapter.md)
 
 | 날짜       | 작성자       | 리포지토리 |
 | ---------- | ------------ | ---------- |

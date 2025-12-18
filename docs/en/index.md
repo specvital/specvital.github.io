@@ -4,7 +4,7 @@ title: Home
 
 # Specvital Documentation
 
-> 🇰🇷 [한국어 문서](/ko/)
+> 🇰🇷 [한국어 버전](/ko/)
 
 Welcome to the Specvital documentation. Specvital is an open-source test coverage insights tool designed to enhance code review processes.
 

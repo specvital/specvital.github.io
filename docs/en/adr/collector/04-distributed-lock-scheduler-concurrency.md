@@ -4,7 +4,7 @@ title: Distributed Lock-Based Scheduler Concurrency
 
 # ADR-04: Distributed Lock-Based Scheduler Concurrency Control
 
-> :kr: [한국어 버전](/ko/adr/collector/04-distributed-lock-scheduler-concurrency.md)
+> 🇰🇷 [한국어 버전](/ko/adr/collector/04-distributed-lock-scheduler-concurrency.md)
 
 | Date       | Author       | Repos     |
 | ---------- | ------------ | --------- |

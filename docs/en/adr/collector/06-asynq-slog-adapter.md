@@ -4,7 +4,7 @@ title: Asynq slog Adapter
 
 # ADR-06: Asynq Logging with slog Adapter
 
-> :kr: [한국어 버전](/ko/adr/collector/06-asynq-slog-adapter.md)
+> 🇰🇷 [한국어 버전](/ko/adr/collector/06-asynq-slog-adapter.md)
 
 | Date       | Author       | Repos     |
 | ---------- | ------------ | --------- |

@@ -155,4 +155,4 @@ LLM으로 테스트 구조 분석 및 추론
 
 - [제품 개요](../prd/00-overview.md) - 핵심 가치 제안
 - [Core Engine](../prd/02-core-engine.md) - 파서 구현 상세
-- [Architecture](/en/architecture) - 시스템 설계
+- [Architecture](/ko/architecture.md) - 시스템 설계

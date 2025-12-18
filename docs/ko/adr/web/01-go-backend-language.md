@@ -4,7 +4,7 @@ title: Go 백엔드 언어
 
 # ADR-01: 백엔드 언어로 Go 선택
 
-> :us: [English Version](/en/adr/web/01-go-backend-language.md)
+> 🇺🇸 [English Version](/en/adr/web/01-go-backend-language.md)
 
 | 날짜       | 작성자       | 리포지토리 |
 | ---------- | ------------ | ---------- |

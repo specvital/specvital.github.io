@@ -4,7 +4,7 @@ title: Graceful Shutdown
 
 # ADR-03: Graceful Shutdown 및 Context 기반 생명주기 관리
 
-> :us: [English Version](/en/adr/collector/03-graceful-shutdown.md)
+> 🇺🇸 [English Version](/en/adr/collector/03-graceful-shutdown.md)
 
 | 날짜       | 작성자       | 리포지토리 |
 | ---------- | ------------ | ---------- |
