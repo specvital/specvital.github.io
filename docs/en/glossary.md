@@ -40,14 +40,14 @@ Domain terminology used across the Specvital platform.
 
 ## Architecture
 
-| Term          | Definition                                                        |
-| ------------- | ----------------------------------------------------------------- |
-| **Core**      | Test parser library (Go) - parses source code into test inventory |
-| **Collector** | Background worker service - orchestrates analysis jobs via queue  |
-| **Web**       | Frontend (Next.js) + Backend API (Go Chi)                         |
-| **Infra**     | Database schema and local development infrastructure              |
-| **Worker**    | Asynq-based process that consumes analysis tasks from Redis queue |
-| **Scheduler** | Cron-based process that enqueues periodic refresh tasks           |
+| Term          | Definition                                                             |
+| ------------- | ---------------------------------------------------------------------- |
+| **Core**      | Test parser library (Go) - parses source code into test inventory      |
+| **Collector** | Background worker service - orchestrates analysis jobs via queue       |
+| **Web**       | Frontend (Next.js) + Backend API (Go Chi)                              |
+| **Infra**     | Database schema and local development infrastructure                   |
+| **Worker**    | River-based process that consumes analysis tasks from PostgreSQL queue |
+| **Scheduler** | Cron-based process that enqueues periodic refresh tasks                |
 
 ## Technical Terms
 
@@ -55,7 +55,7 @@ Domain terminology used across the Specvital platform.
 | --------------- | --------------------------------------------------------------- |
 | **Tree-sitter** | Incremental parsing library used for AST-based code analysis    |
 | **AST**         | Abstract Syntax Tree - structured representation of source code |
-| **Asynq**       | Go library for distributed task queue using Redis               |
+| **River**       | Go library for distributed task queue using PostgreSQL          |
 | **sqlc**        | Generates type-safe Go code from SQL queries                    |
 | **Atlas**       | Database schema migration tool                                  |
 

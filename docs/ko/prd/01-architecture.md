@@ -16,11 +16,8 @@ title: 아키텍처
                            │                   │
                     ┌──────▼──────┐     ┌──────▼──────┐
                     │  PostgreSQL │     │    Core     │
-                    └─────────────┘     │  (Parser)   │
-                           │            └─────────────┘
-                    ┌──────▼──────┐
-                    │    Redis    │
-                    └─────────────┘
+                    │ (River 큐)  │     │  (Parser)   │
+                    └─────────────┘     └─────────────┘
 ```
 
 ## 서비스별 역할
@@ -37,7 +34,7 @@ title: 아키텍처
 ```
 사용자 → GitHub URL 입력
      → Backend: 분석 요청
-     → Redis: 태스크 큐
+     → PostgreSQL (River): 태스크 큐
      → Collector: git clone + 파싱
      → PostgreSQL: 결과 저장
      → Frontend: 결과 조회

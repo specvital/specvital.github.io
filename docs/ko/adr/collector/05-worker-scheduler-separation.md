@@ -2,9 +2,9 @@
 title: 워커-스케줄러 분리
 ---
 
-# ADR-07: 워커-스케줄러 프로세스 분리
+# ADR-05: 워커-스케줄러 프로세스 분리
 
-> 🇺🇸 [English Version](/en/adr/collector/07-worker-scheduler-separation.md)
+> 🇺🇸 [English Version](/en/adr/collector/05-worker-scheduler-separation.md)
 
 | 날짜       | 작성자       | 리포지토리 |
 | ---------- | ------------ | ---------- |
@@ -59,14 +59,15 @@ title: 워커-스케줄러 분리
 
 ```
 ┌──────────────┐      ┌───────────┐      ┌──────────────┐
-│  Scheduler   │─────>│   Redis   │<─────│   Workers    │
-│ (1 인스턴스) │      │   Queue   │      │ (0-N 확장)   │
+│  Scheduler   │─────>│PostgreSQL │<─────│   Workers    │
+│ (1 인스턴스) │      │River 큐   │      │ (0-N 확장)   │
 └──────────────┘      └───────────┘      └──────────────┘
        │                    │                    │
        └────────────────────┴────────────────────┘
                             │
                      ┌──────────────┐
                      │  PostgreSQL  │
+                     │(데이터 저장) │
                      └──────────────┘
 ```
 
@@ -91,13 +92,13 @@ WorkerContainer:
 ├── 암호화 어댑터 (OAuth 토큰 복호화)
 ├── 분석 핸들러 (큐 태스크 프로세서)
 ├── 큐 클라이언트 (태스크 소비)
-└── 공유: 데이터베이스 풀, Redis 연결
+└── 공유: 데이터베이스 풀, PostgreSQL 연결
 
 SchedulerContainer:
 ├── 분산 락 (단일 인스턴스 보장)
 ├── 스케줄러 핸들러 (주기적 작업 실행기)
 ├── 큐 클라이언트 (태스크 enqueue)
-└── 공유: 데이터베이스 풀, Redis 연결
+└── 공유: 데이터베이스 풀, PostgreSQL 연결
 ```
 
 **핵심 원칙**: 워커 컨테이너는 락을 초기화하지 않고, 스케줄러 컨테이너는 암호화를 초기화하지 않음.
@@ -176,20 +177,18 @@ SchedulerContainer:
 ```
 Worker 시작:
 ├── DATABASE_URL 확인 (필수)
-├── REDIS_URL 확인 (필수)
 ├── ENCRYPTION_KEY 확인 (필수) ← 워커 고유
 └── 누락 시 즉시 실패
 
 Scheduler 시작:
 ├── DATABASE_URL 확인 (필수)
-├── REDIS_URL 확인 (필수)
 ├── 분산 락 초기화 ← 스케줄러 고유
 └── 연결 실패 시 즉시 실패
 ```
 
 ### 분산 락 전략
 
-스케줄러는 Redis 기반 분산 락을 사용해 단일 인스턴스 실행 보장함:
+스케줄러는 PostgreSQL 기반 분산 락을 사용해 단일 인스턴스 실행 보장함:
 
 ```
 인스턴스 A: 락 획득 → 스케줄된 작업 실행
@@ -208,7 +207,7 @@ Scheduler 시작:
 스케줄러와 워커는 메시지 큐를 통해서만 통신함:
 
 ```
-Scheduler ──[태스크 Enqueue]──> Redis Queue ──[태스크 Dequeue]──> Worker
+Scheduler ──[태스크 Enqueue]──> River Queue (PostgreSQL) ──[태스크 Dequeue]──> Worker
 ```
 
 **디커플링 이점:**
@@ -226,7 +225,7 @@ Scheduler ──[태스크 Enqueue]──> Redis Queue ──[태스크 Dequeue]
 
 1. 큐에서 새 태스크 수락 중지
 2. 진행 중 태스크 대기 (설정 가능한 타임아웃)
-3. 데이터베이스/Redis 연결 종료
+3. 데이터베이스/PostgreSQL 연결 종료
 4. 종료
 
 **Scheduler 종료:**
@@ -234,7 +233,7 @@ Scheduler ──[태스크 Enqueue]──> Redis Queue ──[태스크 Dequeue]
 1. cron 스케줄러 중지 (새 작업 트리거 방지)
 2. 현재 작업 완료 대기 (타임아웃 포함)
 3. 분산 락 해제
-4. 데이터베이스/Redis 연결 종료
+4. 데이터베이스/PostgreSQL 연결 종료
 5. 종료
 
 ## 결과
@@ -295,7 +294,7 @@ Scheduler ──[태스크 Enqueue]──> Redis Queue ──[태스크 Dequeue]
 
 | 측면            | 함의                                            |
 | --------------- | ----------------------------------------------- |
-| 인프라          | 별도 PaaS 서비스, 공유 Redis/PostgreSQL         |
+| 인프라          | 별도 PaaS 서비스, 공유 PostgreSQL               |
 | 배포            | 독립 릴리스 사이클, 계약 변경 시 조율           |
 | 스케일링        | 워커: 자동 스케일, 스케줄러: 고정 단일 인스턴스 |
 | 모니터링        | 서비스별 메트릭, 통합 큐 깊이 모니터링          |

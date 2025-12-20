@@ -29,15 +29,15 @@ Technology adoption status across the Specvital platform.
 
 ### Backend
 
-| Technology     | Ring  | Version | Notes                   |
-| -------------- | ----- | ------- | ----------------------- |
-| Chi            | Adopt | 5.2     | HTTP router             |
-| Tree-sitter    | Adopt | -       | Multi-language parser   |
-| Asynq          | Adopt | -       | Redis-based task queue  |
-| pgx            | Adopt | -       | PostgreSQL driver       |
-| sqlc           | Adopt | -       | Type-safe SQL           |
-| oapi-codegen   | Adopt | -       | OpenAPI code generation |
-| testcontainers | Adopt | -       | Integration testing     |
+| Technology     | Ring  | Version | Notes                       |
+| -------------- | ----- | ------- | --------------------------- |
+| Chi            | Adopt | 5.2     | HTTP router                 |
+| Tree-sitter    | Adopt | -       | Multi-language parser       |
+| River          | Adopt | -       | PostgreSQL-based task queue |
+| pgx            | Adopt | -       | PostgreSQL driver           |
+| sqlc           | Adopt | -       | Type-safe SQL               |
+| oapi-codegen   | Adopt | -       | OpenAPI code generation     |
+| testcontainers | Adopt | -       | Integration testing         |
 
 ### Frontend
 
@@ -58,7 +58,6 @@ Technology adoption status across the Specvital platform.
 | -------------- | ----- | ------------------------ |
 | Railway        | Adopt | Application hosting      |
 | NeonDB         | Adopt | Serverless PostgreSQL 16 |
-| Upstash        | Adopt | Serverless Redis         |
 | Docker         | Adopt | Containerization         |
 | GitHub Actions | Adopt | CI/CD                    |
 | Dev Containers | Adopt | Development environment  |

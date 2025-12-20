@@ -72,17 +72,15 @@ XX-brief-decision-title.md
 
 ### Collector Repository
 
-| #   | Title                                                                                                            | Area          | Date       |
-| --- | ---------------------------------------------------------------------------------------------------------------- | ------------- | ---------- |
-| 01  | [Scheduled Re-collection Architecture](./collector/01-scheduled-recollection.md)                                 | Architecture  | 2024-12-18 |
-| 02  | [Clean Architecture Layer Introduction](./collector/02-clean-architecture-layers.md)                             | Architecture  | 2024-12-18 |
-| 03  | [Graceful Shutdown and Context-Based Lifecycle Management](./collector/03-graceful-shutdown.md)                  | Architecture  | 2024-12-18 |
-| 04  | [Distributed Lock-Based Scheduler Concurrency Control](./collector/04-distributed-lock-scheduler-concurrency.md) | Concurrency   | 2024-12-18 |
-| 05  | [OAuth Token Graceful Degradation](./collector/05-oauth-token-graceful-degradation.md)                           | Reliability   | 2024-12-18 |
-| 06  | [Asynq Logging with slog Adapter](./collector/06-asynq-slog-adapter.md)                                          | Observability | 2024-12-18 |
-| 07  | [Worker-Scheduler Process Separation](./collector/07-worker-scheduler-separation.md)                             | Architecture  | 2024-12-18 |
-| 08  | [Semaphore-Based Clone Concurrency Control](./collector/08-semaphore-clone-concurrency.md)                       | Concurrency   | 2024-12-18 |
-| 09  | [Repository Pattern Data Access Abstraction](./collector/09-repository-pattern.md)                               | Architecture  | 2024-12-18 |
+| #   | Title                                                                                           | Area         | Date       |
+| --- | ----------------------------------------------------------------------------------------------- | ------------ | ---------- |
+| 01  | [Scheduled Re-collection Architecture](./collector/01-scheduled-recollection.md)                | Architecture | 2024-12-18 |
+| 02  | [Clean Architecture Layer Introduction](./collector/02-clean-architecture-layers.md)            | Architecture | 2024-12-18 |
+| 03  | [Graceful Shutdown and Context-Based Lifecycle Management](./collector/03-graceful-shutdown.md) | Architecture | 2024-12-18 |
+| 04  | [OAuth Token Graceful Degradation](./collector/04-oauth-token-graceful-degradation.md)          | Reliability  | 2024-12-18 |
+| 05  | [Worker-Scheduler Process Separation](./collector/05-worker-scheduler-separation.md)            | Architecture | 2024-12-18 |
+| 06  | [Semaphore-Based Clone Concurrency Control](./collector/06-semaphore-clone-concurrency.md)      | Concurrency  | 2024-12-18 |
+| 07  | [Repository Pattern Data Access Abstraction](./collector/07-repository-pattern.md)              | Architecture | 2024-12-18 |
 
 ### Web Repository
 

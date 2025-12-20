@@ -72,7 +72,7 @@ User → API Service → Queue → Worker Service → Database
 - Operational complexity - two services to monitor and deploy
 - Communication overhead - queue system dependency
 - Debugging complexity - distributed system tracing required
-- Infrastructure cost - queue system (Redis) as additional dependency
+- Infrastructure cost - queue system (PostgreSQL) as additional dependency
 
 ### Option B: Monolithic Service
 
@@ -145,7 +145,7 @@ User → API Service → Serverless Function (analysis)
    - Environment configuration synchronization needed
 
 2. **Communication Dependency**
-   - Queue system (Redis) becomes critical infrastructure
+   - Queue system (PostgreSQL) becomes critical infrastructure
    - Network latency added to task processing
    - Message delivery guarantees must be configured
 
@@ -158,7 +158,7 @@ User → API Service → Serverless Function (analysis)
 
 | Aspect          | Implication                                       |
 | --------------- | ------------------------------------------------- |
-| Queue System    | Redis-based queue required (e.g., Asynq, Sidekiq) |
+| Queue System    | PostgreSQL-based queue required (River)           |
 | Database Access | Both services need DB connection management       |
 | Monitoring      | Distributed tracing for cross-service debugging   |
 | Deployment      | Separate CI/CD pipelines or coordinated releases  |

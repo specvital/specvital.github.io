@@ -42,6 +42,13 @@ When requests initiate work that may take seconds to minutes, how should the sys
 
 **Adopt queue-based asynchronous processing for long-running tasks.**
 
+**Why River:**
+
+- **Polling Issue**: Asynq requires constant Redis polling, increasing latency and resource usage
+- **Transactional Consistency**: River uses PostgreSQL, enabling job enqueue within the same DB transaction
+- **Operational Simplicity**: Single PostgreSQL instance for both data and queue (no separate Redis)
+- **Durability**: PostgreSQL-backed queue with ACID guarantees
+
 The pattern follows this flow:
 
 ```
@@ -181,13 +188,13 @@ User → API → Process (blocking) → Response
 
 ### Technical Implications
 
-| Aspect          | Implication                                                               |
-| --------------- | ------------------------------------------------------------------------- |
-| Queue Selection | Redis-backed queues for simplicity; RabbitMQ for complex routing          |
-| Retry Strategy  | Exponential backoff with jitter; classify transient vs permanent failures |
-| DLQ Handling    | Manual inspection and replay capability required                          |
-| Monitoring      | Queue depth, processing time, failure rate dashboards                     |
-| Idempotency     | Workers must handle duplicate task delivery safely                        |
+| Aspect          | Implication                                                                      |
+| --------------- | -------------------------------------------------------------------------------- |
+| Queue Selection | PostgreSQL-backed River for transactional consistency and operational simplicity |
+| Retry Strategy  | Exponential backoff with jitter; classify transient vs permanent failures        |
+| DLQ Handling    | Manual inspection and replay capability required                                 |
+| Monitoring      | Queue depth, processing time, failure rate dashboards                            |
+| Idempotency     | Workers must handle duplicate task delivery safely                               |
 
 ### Error Classification Strategy
 

@@ -2,9 +2,9 @@
 title: Worker-Scheduler Separation
 ---
 
-# ADR-07: Worker-Scheduler Process Separation
+# ADR-05: Worker-Scheduler Process Separation
 
-> 🇰🇷 [한국어 버전](/ko/adr/collector/07-worker-scheduler-separation.md)
+> 🇰🇷 [한국어 버전](/ko/adr/collector/05-worker-scheduler-separation.md)
 
 | Date       | Author       | Repos     |
 | ---------- | ------------ | --------- |
@@ -59,14 +59,15 @@ Combining these creates unnecessary security exposure and configuration complexi
 
 ```
 ┌──────────────┐      ┌───────────┐      ┌──────────────┐
-│  Scheduler   │─────>│   Redis   │<─────│   Workers    │
-│ (1 instance) │      │   Queue   │      │ (0-N scaled) │
+│  Scheduler   │─────>│PostgreSQL │<─────│   Workers    │
+│ (1 instance) │      │River Queue│      │ (0-N scaled) │
 └──────────────┘      └───────────┘      └──────────────┘
        │                    │                    │
        └────────────────────┴────────────────────┘
                             │
                      ┌──────────────┐
                      │  PostgreSQL  │
+                     │ (Data Store) │
                      └──────────────┘
 ```
 
@@ -91,13 +92,13 @@ WorkerContainer:
 ├── Encryption adapter (OAuth token decryption)
 ├── Analysis handler (queue task processor)
 ├── Queue client (task consumption)
-└── Shared: Database pool, Redis connection
+└── Shared: Database pool, PostgreSQL connection
 
 SchedulerContainer:
 ├── Distributed lock (single-instance guarantee)
 ├── Scheduler handler (periodic job executor)
 ├── Queue client (task enqueuing)
-└── Shared: Database pool, Redis connection
+└── Shared: Database pool, PostgreSQL connection
 ```
 
 **Key Principle**: Worker container never initializes lock, scheduler container never initializes encryption.
@@ -176,20 +177,18 @@ Each process validates only its requirements:
 ```
 Worker startup:
 ├── Check DATABASE_URL (required)
-├── Check REDIS_URL (required)
 ├── Check ENCRYPTION_KEY (required) ← Unique to worker
 └── Fail fast if missing
 
 Scheduler startup:
 ├── Check DATABASE_URL (required)
-├── Check REDIS_URL (required)
 ├── Initialize distributed lock ← Unique to scheduler
 └── Fail fast if connection fails
 ```
 
 ### Distributed Lock Strategy
 
-Scheduler uses Redis-based distributed lock to ensure single-instance execution:
+Scheduler uses PostgreSQL-based distributed lock to ensure single-instance execution:
 
 ```
 Instance A: Acquires lock → Executes scheduled jobs
@@ -208,7 +207,7 @@ Instance C: Lock acquisition fails → Remains standby
 Scheduler and workers communicate exclusively through the message queue:
 
 ```
-Scheduler ──[Enqueue Task]──> Redis Queue ──[Dequeue Task]──> Worker
+Scheduler ──[Enqueue Task]──> River Queue (PostgreSQL) ──[Dequeue Task]──> Worker
 ```
 
 **Decoupling Benefits:**
@@ -226,7 +225,7 @@ Each process has tailored shutdown behavior:
 
 1. Stop accepting new tasks from queue
 2. Wait for in-flight tasks (with configurable timeout)
-3. Close database/Redis connections
+3. Close database/PostgreSQL connections
 4. Exit
 
 **Scheduler Shutdown:**
@@ -234,7 +233,7 @@ Each process has tailored shutdown behavior:
 1. Stop cron scheduler (prevent new job triggers)
 2. Wait for current job completion (with timeout)
 3. Release distributed lock
-4. Close database/Redis connections
+4. Close database/PostgreSQL connections
 5. Exit
 
 ## Consequences
@@ -295,7 +294,7 @@ Each process has tailored shutdown behavior:
 
 | Aspect                 | Implication                                           |
 | ---------------------- | ----------------------------------------------------- |
-| Infrastructure         | Separate PaaS services, shared Redis/PostgreSQL       |
+| Infrastructure         | Separate PaaS services, shared PostgreSQL             |
 | Deployment             | Independent release cycles, coordinated for contracts |
 | Scaling                | Workers: auto-scale, Scheduler: fixed single instance |
 | Monitoring             | Per-service metrics, unified queue depth monitoring   |

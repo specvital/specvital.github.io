@@ -46,12 +46,10 @@ Documentation of architectural decisions made during the development of Specvita
 - [Scheduled Re-collection](./adr/collector/01-scheduled-recollection.md)
 - [Clean Architecture Layers](./adr/collector/02-clean-architecture-layers.md)
 - [Graceful Shutdown](./adr/collector/03-graceful-shutdown.md)
-- [Distributed Lock Concurrency](./adr/collector/04-distributed-lock-scheduler-concurrency.md)
-- [OAuth Token Degradation](./adr/collector/05-oauth-token-graceful-degradation.md)
-- [Asynq slog Adapter](./adr/collector/06-asynq-slog-adapter.md)
-- [Worker-Scheduler Separation](./adr/collector/07-worker-scheduler-separation.md)
-- [Semaphore Clone Concurrency](./adr/collector/08-semaphore-clone-concurrency.md)
-- [Repository Pattern](./adr/collector/09-repository-pattern.md)
+- [OAuth Token Degradation](./adr/collector/04-oauth-token-graceful-degradation.md)
+- [Worker-Scheduler Separation](./adr/collector/05-worker-scheduler-separation.md)
+- [Semaphore Clone Concurrency](./adr/collector/06-semaphore-clone-concurrency.md)
+- [Repository Pattern](./adr/collector/07-repository-pattern.md)
 
 **[Web](./adr/web/)**
 

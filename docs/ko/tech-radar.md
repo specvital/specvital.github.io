@@ -29,15 +29,15 @@ Specvital 플랫폼의 기술 채택 현황.
 
 ### 백엔드
 
-| 기술           | 링    | 버전 | 비고                 |
-| -------------- | ----- | ---- | -------------------- |
-| Chi            | Adopt | 5.2  | HTTP 라우터          |
-| Tree-sitter    | Adopt | -    | 다중 언어 파서       |
-| Asynq          | Adopt | -    | Redis 기반 태스크 큐 |
-| pgx            | Adopt | -    | PostgreSQL 드라이버  |
-| sqlc           | Adopt | -    | 타입 안전 SQL        |
-| oapi-codegen   | Adopt | -    | OpenAPI 코드 생성    |
-| testcontainers | Adopt | -    | 통합 테스트          |
+| 기술           | 링    | 버전 | 비고                      |
+| -------------- | ----- | ---- | ------------------------- |
+| Chi            | Adopt | 5.2  | HTTP 라우터               |
+| Tree-sitter    | Adopt | -    | 다중 언어 파서            |
+| River          | Adopt | -    | PostgreSQL 기반 태스크 큐 |
+| pgx            | Adopt | -    | PostgreSQL 드라이버       |
+| sqlc           | Adopt | -    | 타입 안전 SQL             |
+| oapi-codegen   | Adopt | -    | OpenAPI 코드 생성         |
+| testcontainers | Adopt | -    | 통합 테스트               |
 
 ### 프론트엔드
 
@@ -58,7 +58,6 @@ Specvital 플랫폼의 기술 채택 현황.
 | -------------- | ----- | ---------------------- |
 | Railway        | Adopt | 애플리케이션 호스팅    |
 | NeonDB         | Adopt | 서버리스 PostgreSQL 16 |
-| Upstash        | Adopt | 서버리스 Redis         |
 | Docker         | Adopt | 컨테이너화             |
 | GitHub Actions | Adopt | CI/CD                  |
 | Dev Containers | Adopt | 개발 환경              |

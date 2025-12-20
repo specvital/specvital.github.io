@@ -2,9 +2,9 @@
 title: 세마포어 기반 클론 동시성 제어
 ---
 
-# ADR-08: 세마포어 기반 클론 동시성 제어
+# ADR-06: 세마포어 기반 클론 동시성 제어
 
-> 🇺🇸 [English Version](/en/adr/collector/08-semaphore-clone-concurrency.md)
+> 🇺🇸 [English Version](/en/adr/collector/06-semaphore-clone-concurrency.md)
 
 | 날짜       | 작성자       | 리포지토리 |
 | ---------- | ------------ | ---------- |
@@ -29,7 +29,7 @@ Git clone 작업은 리소스 집약적:
 ### 제약 조건
 
 - **배포 대상**: 소규모 VM (512MB-2GB RAM)
-- **큐 아키텍처**: 설정 가능한 동시성을 가진 Asynq worker (기본값: 5)
+- **큐 아키텍처**: 설정 가능한 동시성을 가진 River worker (기본값: 5)
 - **워크로드**: 다양한 저장소 크기 (소규모 라이브러리 ~ 대형 모노레포)
 
 ### 목표
@@ -146,7 +146,7 @@ UseCase에서 `golang.org/x/sync/semaphore.Weighted`를 사용하여 clone 호�
 
 **단점:**
 
-- 과잉 엔지니어링: Asynq가 이미 worker pool 제공
+- 과잉 엔지니어링: River가 이미 worker pool 제공
 - 중첩된 worker pool이 관찰성 복잡화
 - 수동 context 처리 필요 (`select` 문)
 - semaphore보다 더 많은 보일러플레이트
@@ -171,7 +171,7 @@ UseCase에서 `golang.org/x/sync/semaphore.Weighted`를 사용하여 clone 호�
 └─────────────────────────────────────┘
 ```
 
-- **UseCase는 실행 컨텍스트 인식**: Asynq worker 동시성, 메모리 제약 파악
+- **UseCase는 실행 컨텍스트 인식**: River worker 동시성, 메모리 제약 파악
 - **Adapter는 무상태 유지**: 순수 I/O, 리소스 관리 없음
 - **설정 유연성**: 다른 usecase는 다른 제한 가능
 
@@ -240,7 +240,7 @@ if err := uc.cloneSem.Acquire(ctx, 1); err != nil {
 **큐 대기 시간:**
 
 - 버스트 트래픽 시 작업이 semaphore 대기
-- 완화: Asynq 큐 깊이 모니터링
+- 완화: River 큐 깊이 모니터링
 
 **인스턴스별 제한:**
 

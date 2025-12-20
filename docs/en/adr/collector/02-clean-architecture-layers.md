@@ -19,7 +19,7 @@ The initial monolithic structure presented several challenges as the codebase gr
 **Domain-Infrastructure Coupling:**
 
 - Business logic was intertwined with database queries and queue operations
-- Changes to infrastructure details (e.g., PostgreSQL queries, Asynq task handling) required modifications to core business logic
+- Changes to infrastructure details (e.g., PostgreSQL queries, River task handling) required modifications to core business logic
 
 **Limited Testability:**
 
@@ -95,7 +95,7 @@ Command (main) → Application → Handler → UseCase → Domain
 
 **Handler Layer:**
 
-- Entry point for external triggers (Asynq tasks, Cron jobs)
+- Entry point for external triggers (River tasks, Cron jobs)
 - Extracts request parameters and invokes UseCase
 - Handles framework-specific concerns (payload unmarshaling, error codes)
 

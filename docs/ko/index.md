@@ -46,12 +46,10 @@ Specvital 개발 중 내린 아키텍처 결정에 대한 문서.
 - [스케줄 기반 재수집](./adr/collector/01-scheduled-recollection.md)
 - [Clean Architecture 레이어](./adr/collector/02-clean-architecture-layers.md)
 - [Graceful Shutdown](./adr/collector/03-graceful-shutdown.md)
-- [분산 락 동시성 제어](./adr/collector/04-distributed-lock-scheduler-concurrency.md)
-- [OAuth 토큰 Degradation](./adr/collector/05-oauth-token-graceful-degradation.md)
-- [Asynq slog 어댑터](./adr/collector/06-asynq-slog-adapter.md)
-- [Worker-Scheduler 분리](./adr/collector/07-worker-scheduler-separation.md)
-- [Semaphore Clone 동시성](./adr/collector/08-semaphore-clone-concurrency.md)
-- [Repository 패턴](./adr/collector/09-repository-pattern.md)
+- [OAuth 토큰 Degradation](./adr/collector/04-oauth-token-graceful-degradation.md)
+- [Worker-Scheduler 분리](./adr/collector/05-worker-scheduler-separation.md)
+- [Semaphore Clone 동시성](./adr/collector/06-semaphore-clone-concurrency.md)
+- [Repository 패턴](./adr/collector/07-repository-pattern.md)
 
 **[Web](./adr/web/)**
 

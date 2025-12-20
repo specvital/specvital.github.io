@@ -2,9 +2,9 @@
 title: Semaphore-Based Clone Concurrency
 ---
 
-# ADR-08: Semaphore-Based Clone Concurrency Control
+# ADR-06: Semaphore-Based Clone Concurrency Control
 
-> 🇰🇷 [한국어 버전](/ko/adr/collector/08-semaphore-clone-concurrency.md)
+> 🇰🇷 [한국어 버전](/ko/adr/collector/06-semaphore-clone-concurrency.md)
 
 | Date       | Author       | Repos     |
 | ---------- | ------------ | --------- |
@@ -29,7 +29,7 @@ Without concurrency control, unbounded parallel clones cause:
 ### Constraints
 
 - **Deployment Target**: Small VMs (512MB-2GB RAM)
-- **Queue Architecture**: Asynq worker with configurable concurrency (default: 5)
+- **Queue Architecture**: River worker with configurable concurrency (default: 5)
 - **Workload**: Variable repository sizes (small libs to large monorepos)
 
 ### Goals
@@ -146,7 +146,7 @@ Create dedicated clone worker pool with buffered channel.
 
 **Cons:**
 
-- Over-engineering: Asynq already provides worker pool
+- Over-engineering: River already provides worker pool
 - Nested worker pools complicate observability
 - Requires manual context handling (`select` statement)
 - More boilerplate than semaphore
@@ -171,7 +171,7 @@ Concurrency control is a **business policy decision**:
 └─────────────────────────────────────┘
 ```
 
-- **UseCase knows execution context**: Aware of Asynq worker concurrency, memory constraints
+- **UseCase knows execution context**: Aware of River worker concurrency, memory constraints
 - **Adapter stays stateless**: Pure I/O, no resource management
 - **Configuration flexibility**: Different usecases can have different limits
 
@@ -240,7 +240,7 @@ Benefits:
 **Queue Wait Time:**
 
 - During burst traffic, tasks wait for semaphore
-- Mitigation: Asynq queue depth monitoring
+- Mitigation: River queue depth monitoring
 
 **Per-Instance Limit:**
 

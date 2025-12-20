@@ -2,9 +2,9 @@
 title: 리포지토리 패턴
 ---
 
-# ADR-09: 리포지토리 패턴 데이터 접근 추상화
+# ADR-07: 리포지토리 패턴 데이터 접근 추상화
 
-> 🇺🇸 [English Version](/en/adr/collector/09-repository-pattern.md)
+> 🇺🇸 [English Version](/en/adr/collector/07-repository-pattern.md)
 
 | 날짜       | 작성자       | 리포지토리 |
 | ---------- | ------------ | ---------- |

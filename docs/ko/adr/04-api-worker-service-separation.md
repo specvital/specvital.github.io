@@ -72,7 +72,7 @@ User → API Service → Queue → Worker Service → Database
 - 운영 복잡성 - 두 서비스 모니터링 및 배포 필요
 - 통신 오버헤드 - 큐 시스템 의존성
 - 디버깅 복잡성 - 분산 시스템 추적 필요
-- 인프라 비용 - 큐 시스템(Redis)이 추가 의존성
+- 인프라 비용 - 큐 시스템(PostgreSQL)이 추가 의존성
 
 ### Option B: 모놀리식 서비스
 
@@ -145,7 +145,7 @@ User → API Service → Serverless Function (analysis)
    - 환경 설정 동기화 필요
 
 2. **통신 의존성**
-   - 큐 시스템(Redis)이 핵심 인프라가 됨
+   - 큐 시스템(PostgreSQL)이 핵심 인프라가 됨
    - 작업 처리에 네트워크 지연 추가
    - 메시지 전달 보장 설정 필요
 
@@ -158,7 +158,7 @@ User → API Service → Serverless Function (analysis)
 
 | 측면              | 함의                                     |
 | ----------------- | ---------------------------------------- |
-| 큐 시스템         | Redis 기반 큐 필요 (예: Asynq, Sidekiq)  |
+| 큐 시스템         | PostgreSQL 기반 큐 필요 (River)          |
 | 데이터베이스 접근 | 두 서비스 모두 DB 연결 관리 필요         |
 | 모니터링          | 서비스 간 디버깅을 위한 분산 추적        |
 | 배포              | 별도 CI/CD 파이프라인 또는 조율된 릴리스 |

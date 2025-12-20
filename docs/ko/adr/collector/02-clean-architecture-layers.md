@@ -19,7 +19,7 @@ title: 클린 아키텍처 레이어
 **도메인-인프라 결합:**
 
 - 비즈니스 로직이 데이터베이스 쿼리 및 큐 작업과 뒤섞임
-- 인프라 세부사항(예: PostgreSQL 쿼리, Asynq 태스크 처리) 변경이 핵심 비즈니스 로직 수정 필요
+- 인프라 세부사항(예: PostgreSQL 쿼리, River 태스크 처리) 변경이 핵심 비즈니스 로직 수정 필요
 
 **제한된 테스트 용이성:**
 
@@ -95,7 +95,7 @@ Command (main) → Application → Handler → UseCase → Domain
 
 **Handler Layer:**
 
-- 외부 트리거(Asynq 태스크, Cron 작업)의 진입점
+- 외부 트리거(River 태스크, Cron 작업)의 진입점
 - 요청 파라미터 추출 및 UseCase 호출
 - 프레임워크 특화 관심사 처리 (페이로드 언마셜링, 에러 코드)
 

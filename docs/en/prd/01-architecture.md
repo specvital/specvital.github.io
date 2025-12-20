@@ -16,11 +16,8 @@ title: Architecture
                            │                   │
                     ┌──────▼──────┐     ┌──────▼──────┐
                     │  PostgreSQL │     │    Core     │
-                    └─────────────┘     │  (Parser)   │
-                           │            └─────────────┘
-                    ┌──────▼──────┐
-                    │    Redis    │
-                    └─────────────┘
+                    │ (River Queue)     │  (Parser)   │
+                    └─────────────┘     └─────────────┘
 ```
 
 ## Service Roles
@@ -37,7 +34,7 @@ title: Architecture
 ```
 User → Enter GitHub URL
     → Backend: Analysis request
-    → Redis: Task queue
+    → PostgreSQL (River): Task queue
     → Collector: git clone + parsing
     → PostgreSQL: Store results
     → Frontend: View results

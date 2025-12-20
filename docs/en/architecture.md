@@ -18,25 +18,26 @@ SpecVital is a platform for analyzing and visualizing test files in GitHub repos
 │   ┌──────────────────────────────────────────────────────────────────────────┐  │
 │   │                            Web Service                                    │  │
 │   │                                                                           │  │
-│   │   ┌─────────┐         ┌─────────┐         ┌─────────────────────────┐   │  │
-│   │   │   web   │◀──────▶│  Redis  │◀───────▶│       collector         │   │  │
-│   │   │         │  Queue  │         │  Queue  │                         │   │  │
-│   │   │  API +  │         └─────────┘         │  ┌───────┐  ┌────────┐  │   │  │
-│   │   │Dashboard│                             │  │Worker │  │Scheduler│  │   │  │
-│   │   └────┬────┘                             │  └───┬───┘  └────────┘  │   │  │
-│   │        │                                  │      │                   │   │  │
-│   │        │                                  │      ▼                   │   │  │
-│   │        │                                  │  ┌───────┐               │   │  │
-│   │        │                                  │  │ core  │ (Library)    │   │  │
-│   │        │                                  │  └───────┘               │   │  │
-│   │        │                                  └──────────┬──────────────┘   │  │
+│   │   ┌─────────┐                                 ┌─────────────────────┐   │  │
+│   │   │   web   │                                 │      collector      │   │  │
+│   │   │         │                                 │                     │   │  │
+│   │   │  API +  │                                 │  ┌───────┐ ┌──────┐ │   │  │
+│   │   │Dashboard│                                 │  │Worker │ │Sched │ │   │  │
+│   │   └────┬────┘                                 │  └───┬───┘ └──────┘ │   │  │
+│   │        │                                      │      │               │   │  │
+│   │        │                                      │      ▼               │   │  │
+│   │        │                                      │  ┌───────┐           │   │  │
+│   │        │                                      │  │ core  │ (Library)│   │  │
+│   │        │                                      │  └───────┘           │   │  │
+│   │        │                                      └──────┬───────────────┘   │  │
 │   │        │                                             │                   │  │
 │   │        └──────────────────┬──────────────────────────┘                   │  │
 │   │                           │                                              │  │
 │   │                           ▼                                              │  │
-│   │                   ┌───────────────┐                                      │  │
-│   │                   │  PostgreSQL   │                                      │  │
-│   │                   └───────────────┘                                      │  │
+│   │                   ┌──────────────────────┐                               │  │
+│   │                   │     PostgreSQL       │                               │  │
+│   │                   │ (Data + River Queue) │                               │  │
+│   │                   └──────────────────────┘                               │  │
 │   └──────────────────────────────────────────────────────────────────────────┘  │
 │                                                                                  │
 └─────────────────────────────────────────────────────────────────────────────────┘
@@ -58,10 +59,10 @@ SpecVital is a platform for analyzing and visualizing test files in GitHub repos
 
 **Role**: Analysis worker
 
-| Item         | Description                     |
-| ------------ | ------------------------------- |
-| Language     | Go                              |
-| Dependencies | core, infra (PostgreSQL, Redis) |
+| Item         | Description              |
+| ------------ | ------------------------ |
+| Language     | Go                       |
+| Dependencies | core, infra (PostgreSQL) |
 
 ## Data Flow
 
@@ -74,16 +75,17 @@ SpecVital is a platform for analyzing and visualizing test files in GitHub repos
 ┌─────────────────────────────────────────────────────────────────────────────┐
 │                              Web Service                                     │
 │                                                                              │
-│  ┌─────────┐    2. Enqueue     ┌─────────┐    3. Consume    ┌───────────┐  │
-│  │   web   │──────────────────▶│  Redis  │◀─────────────────│ collector │  │
-│  │  (API)  │                   │ (Queue) │                  │  (Worker) │  │
-│  └────┬────┘                   └─────────┘                  └─────┬─────┘  │
-│       │                                                           │        │
-│       │ 5. Read Results                            4. Parse (core)│        │
-│       │                                                           │        │
-│       │            ┌──────────────────────────┐                   │        │
-│       └───────────▶│       PostgreSQL         │◀──────────────────┘        │
-│                    └──────────────────────────┘                            │
+│  ┌─────────┐    2. Enqueue                        3. Consume    ┌───────────┐  │
+│  │   web   │──────────────────────────────────────────────────▶│ collector │  │
+│  │  (API)  │                                                    │  (Worker) │  │
+│  └────┬────┘                                                    └─────┬─────┘  │
+│       │                                                               │        │
+│       │ 5. Read Results                              4. Parse (core) │        │
+│       │                                                               │        │
+│       │            ┌────────────────────────────┐                     │        │
+│       └───────────▶│       PostgreSQL           │◀────────────────────┘        │
+│                    │  (Data + River Queue)      │                              │
+│                    └────────────────────────────┘                              │
 │                                                                              │
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
@@ -91,8 +93,8 @@ SpecVital is a platform for analyzing and visualizing test files in GitHub repos
 **Flow**:
 
 1. User requests analysis with GitHub URL
-2. web enqueues job to Redis
-3. collector worker consumes job
+2. web enqueues job to River queue (PostgreSQL)
+3. collector worker consumes job from River
 4. collector parses tests via core and stores results
 5. web reads results from DB
 6. User views visualized results
@@ -104,7 +106,6 @@ SpecVital is a platform for analyzing and visualizing test files in GitHub repos
 | Service             | Platform |
 | ------------------- | -------- |
 | PostgreSQL          | Neon     |
-| Redis               | Upstash  |
 | web-backend         | Railway  |
 | web-frontend        | Vercel   |
 | collector-worker    | Railway  |

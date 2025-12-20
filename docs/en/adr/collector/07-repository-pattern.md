@@ -2,9 +2,9 @@
 title: Repository Pattern
 ---
 
-# ADR-09: Repository Pattern Data Access Abstraction
+# ADR-07: Repository Pattern Data Access Abstraction
 
-> 🇰🇷 [한국어 버전](/ko/adr/collector/09-repository-pattern.md)
+> 🇰🇷 [한국어 버전](/ko/adr/collector/07-repository-pattern.md)
 
 | Date       | Author       | Repos     |
 | ---------- | ------------ | --------- |
