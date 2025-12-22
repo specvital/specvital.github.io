@@ -241,7 +241,7 @@ export default defineConfig({
   },
 
   themeConfig: {
-    logo: "/logo.svg",
+    logo: "/logo.png",
 
     socialLinks: [{ icon: "github", link: "https://github.com/specvital" }],
 
