@@ -2,9 +2,9 @@
 title: 리포지토리 전략
 ---
 
-# ADR-06: Polyrepo 리포지토리 전략
+# ADR-05: Polyrepo 리포지토리 전략
 
-> [English Version](/en/adr/06-repository-strategy.md)
+> [English Version](/en/adr/05-repository-strategy.md)
 
 | 날짜       | 작성자       | 대상 리포 |
 | ---------- | ------------ | --------- |

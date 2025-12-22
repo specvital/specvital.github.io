@@ -2,9 +2,9 @@
 title: 공유 인프라
 ---
 
-# ADR-08: 공유 인프라 전략
+# ADR-07: 공유 인프라 전략
 
-> [English Version](/en/adr/08-shared-infrastructure.md)
+> [English Version](/en/adr/07-shared-infrastructure.md)
 
 | 날짜       | 작성자       | 영향 리포지토리 |
 | ---------- | ------------ | --------------- |

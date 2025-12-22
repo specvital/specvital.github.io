@@ -2,9 +2,9 @@
 title: PaaS 우선 인프라
 ---
 
-# ADR-07: PaaS 우선 인프라 전략
+# ADR-06: PaaS 우선 인프라 전략
 
-> [English Version](/en/adr/07-paas-first-infrastructure.md)
+> [English Version](/en/adr/06-paas-first-infrastructure.md)
 
 | 날짜       | 작성자       | 리포지토리 |
 | ---------- | ------------ | ---------- |

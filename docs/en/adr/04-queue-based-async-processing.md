@@ -2,9 +2,9 @@
 title: Queue Processing
 ---
 
-# ADR-05: Queue-Based Asynchronous Processing
+# ADR-04: Queue-Based Asynchronous Processing
 
-> 🇰🇷 [한국어 버전](/ko/adr/05-queue-based-async-processing.md)
+> 🇰🇷 [한국어 버전](/ko/adr/04-queue-based-async-processing.md)
 
 | Date       | Author       | Repos          |
 | ---------- | ------------ | -------------- |

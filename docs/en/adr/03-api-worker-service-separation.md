@@ -2,9 +2,9 @@
 title: API Worker
 ---
 
-# ADR-04: API and Worker Service Separation
+# ADR-03: API and Worker Service Separation
 
-> [한국어 버전](/ko/adr/04-api-worker-service-separation.md)
+> [한국어 버전](/ko/adr/03-api-worker-service-separation.md)
 
 | Date       | Author       | Repos          |
 | ---------- | ------------ | -------------- |

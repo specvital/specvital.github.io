@@ -2,9 +2,9 @@
 title: External Repo ID 무결성
 ---
 
-# ADR-09: External Repository ID 기반 데이터 무결성
+# ADR-08: External Repository ID 기반 데이터 무결성
 
-> 🇺🇸 [English Version](/en/adr/09-external-repo-id-integrity.md)
+> 🇺🇸 [English Version](/en/adr/08-external-repo-id-integrity.md)
 
 | 날짜       | 작성자       | 리포지토리 |
 | ---------- | ------------ | ---------- |

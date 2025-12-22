@@ -2,9 +2,9 @@
 title: API/Worker 분리
 ---
 
-# ADR-04: API와 Worker 서비스 분리
+# ADR-03: API와 Worker 서비스 분리
 
-> [English Version](/en/adr/04-api-worker-service-separation.md)
+> [English Version](/en/adr/03-api-worker-service-separation.md)
 
 | Date       | Author       | Repos          |
 | ---------- | ------------ | -------------- |

@@ -2,9 +2,9 @@
 title: PaaS First
 ---
 
-# ADR-07: PaaS-First Infrastructure Strategy
+# ADR-06: PaaS-First Infrastructure Strategy
 
-> [한국어 버전](/ko/adr/07-paas-first-infrastructure.md)
+> [한국어 버전](/ko/adr/06-paas-first-infrastructure.md)
 
 | Date       | Author       | Repos |
 | ---------- | ------------ | ----- |

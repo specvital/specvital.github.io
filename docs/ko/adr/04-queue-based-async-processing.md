@@ -2,9 +2,9 @@
 title: 큐 기반 비동기 처리
 ---
 
-# ADR-05: 큐 기반 비동기 처리
+# ADR-04: 큐 기반 비동기 처리
 
-> 🇺🇸 [English Version](/en/adr/05-queue-based-async-processing.md)
+> 🇺🇸 [English Version](/en/adr/04-queue-based-async-processing.md)
 
 | 날짜       | 작성자       | 리포지토리     |
 | ---------- | ------------ | -------------- |

@@ -2,9 +2,9 @@
 title: Shared Infra
 ---
 
-# ADR-08: Shared Infrastructure Strategy
+# ADR-07: Shared Infrastructure Strategy
 
-> [한국어 버전](/ko/adr/08-shared-infrastructure.md)
+> [한국어 버전](/ko/adr/07-shared-infrastructure.md)
 
 | Date       | Author       | Repos |
 | ---------- | ------------ | ----- |

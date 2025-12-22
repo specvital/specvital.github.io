@@ -2,9 +2,9 @@
 title: Repository Strategy
 ---
 
-# ADR-06: Polyrepo Repository Strategy
+# ADR-05: Polyrepo Repository Strategy
 
-> [한국어 버전](/ko/adr/06-repository-strategy.md)
+> [한국어 버전](/ko/adr/05-repository-strategy.md)
 
 | Date       | Author       | Repos |
 | ---------- | ------------ | ----- |
