@@ -332,7 +332,6 @@ shadcn/ui의 공식 설계 원칙:
 
 - [ADR-02: Next.js 16 + React 19 선택](/ko/adr/web/02-nextjs-react-selection.md)
 - [ADR-06: PaaS 우선 인프라](/ko/adr/06-paas-first-infrastructure.md)
-- [Frontend CLAUDE.md](/src/frontend/CLAUDE.md)
 
 ### 외부
 

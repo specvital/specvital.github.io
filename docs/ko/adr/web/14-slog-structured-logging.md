@@ -247,7 +247,6 @@ logger.Info(ctx, "analysis started")
 ### Internal
 
 - [ADR-01: Go를 백엔드 언어로](/ko/adr/web/01-go-backend-language.md)
-- [Go 코딩 표준](/.claude/rules/languages/golang.md) - slog 권장
 
 ### External
 

@@ -324,7 +324,6 @@ From shadcn/ui's official design principles:
 
 - [ADR-02: Next.js 16 + React 19 Selection](/en/adr/web/02-nextjs-react-selection.md)
 - [ADR-06: PaaS-First Infrastructure](/en/adr/06-paas-first-infrastructure.md)
-- [Frontend CLAUDE.md](/src/frontend/CLAUDE.md)
 
 ### External
 

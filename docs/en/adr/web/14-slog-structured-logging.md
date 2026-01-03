@@ -247,7 +247,6 @@ logger.Info(ctx, "analysis started")
 ### Internal
 
 - [ADR-01: Go as Backend Language](/en/adr/web/01-go-backend-language.md)
-- [Go Coding Standards](/.claude/rules/languages/golang.md) - slog recommendation
 
 ### External
 
