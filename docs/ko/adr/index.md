@@ -103,9 +103,28 @@ XX-brief-decision-title.md
 
 ### Web 리포지토리
 
-| #   | 제목                                                     | 영역       | 날짜       |
-| --- | -------------------------------------------------------- | ---------- | ---------- |
-| 01  | [백엔드 언어로 Go 선택](./web/01-go-backend-language.md) | Tech Stack | 2024-12-18 |
+| #   | 제목                                                                        | 영역          | 날짜       |
+| --- | --------------------------------------------------------------------------- | ------------- | ---------- |
+| 01  | [백엔드 언어로 Go 선택](./web/01-go-backend-language.md)                    | Tech Stack    | 2024-12-18 |
+| 02  | [Next.js 16 + React 19 선택](./web/02-nextjs-react-selection.md)            | Tech Stack    | 2025-12-04 |
+| 03  | [Chi 라우터 선택](./web/03-chi-router-selection.md)                         | Tech Stack    | 2025-01-03 |
+| 04  | [TanStack Query 선택](./web/04-tanstack-query-selection.md)                 | Tech Stack    | 2025-01-03 |
+| 05  | [shadcn/ui + Tailwind CSS 선택](./web/05-shadcn-tailwind-selection.md)      | Tech Stack    | 2025-01-03 |
+| 06  | [SQLc 선택](./web/06-sqlc-selection.md)                                     | Tech Stack    | 2025-01-03 |
+| 07  | [Next.js BFF 아키텍처](./web/07-nextjs-bff-architecture.md)                 | Architecture  | 2025-01-03 |
+| 08  | [Clean Architecture 패턴](./web/08-clean-architecture-pattern.md)           | Architecture  | 2025-01-03 |
+| 09  | [DI Container 패턴](./web/09-di-container-pattern.md)                       | Architecture  | 2025-01-03 |
+| 10  | [StrictServerInterface 계약](./web/10-strict-server-interface-contract.md)  | API           | 2025-01-03 |
+| 11  | [Feature 기반 모듈 구조](./web/11-feature-based-module-organization.md)     | Architecture  | 2025-01-03 |
+| 12  | [APIHandlers 합성 패턴](./web/12-apihandlers-composition-pattern.md)        | Architecture  | 2025-01-03 |
+| 13  | [도메인 에러 처리 패턴](./web/13-domain-error-handling-pattern.md)          | Architecture  | 2025-01-03 |
+| 14  | [slog 구조화 로깅](./web/14-slog-structured-logging.md)                     | Observability | 2025-01-03 |
+| 15  | [React 19 use() Hook 패턴](./web/15-react-19-use-hook-pattern.md)           | Frontend      | 2025-01-03 |
+| 16  | [nuqs URL 상태 관리](./web/16-nuqs-url-state-management.md)                 | Frontend      | 2025-01-03 |
+| 17  | [next-intl i18n 전략](./web/17-next-intl-i18n-strategy.md)                  | Frontend      | 2025-01-03 |
+| 18  | [next-themes 다크 모드](./web/18-next-themes-dark-mode.md)                  | Frontend      | 2025-01-03 |
+| 19  | [CSS 변수 디자인 토큰 시스템](./web/19-css-variable-design-token-system.md) | Frontend      | 2025-01-03 |
+| 20  | [스켈레톤 로딩 패턴](./web/20-skeleton-loading-pattern.md)                  | Frontend      | 2025-01-03 |
 
 ## 프로세스
 
