@@ -85,6 +85,10 @@ export default defineConfig({
                   link: "/en/adr/10-test-status-data-contract",
                 },
                 {
+                  text: "Visibility Access Control",
+                  link: "/en/adr/11-community-private-repo-filtering",
+                },
+                {
                   text: "Core",
                   collapsed: true,
                   items: [
@@ -199,6 +203,7 @@ export default defineConfig({
                 { text: "External Repo ID 무결성", link: "/ko/adr/08-external-repo-id-integrity" },
                 { text: "GitHub App 통합", link: "/ko/adr/09-github-app-integration" },
                 { text: "TestStatus 데이터 계약", link: "/ko/adr/10-test-status-data-contract" },
+                { text: "Visibility 접근 제어", link: "/ko/adr/11-community-private-repo-filtering" },
                 {
                   text: "Core",
                   collapsed: true,

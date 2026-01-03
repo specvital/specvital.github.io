@@ -40,6 +40,7 @@ Documentation of architectural decisions made during the development of Specvita
 - [External Repo ID Integrity](./adr/08-external-repo-id-integrity.md)
 - [GitHub App Integration](./adr/09-github-app-integration.md)
 - [TestStatus Data Contract](./adr/10-test-status-data-contract.md)
+- [Repository Visibility-Based Access Control](./adr/11-community-private-repo-filtering.md)
 
 **[Core](./adr/core/)**
 

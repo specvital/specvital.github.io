@@ -55,18 +55,19 @@ XX-brief-decision-title.md
 
 ### Cross-cutting (All Repositories)
 
-| #   | Title                                                                             | Area           | Date       |
-| --- | --------------------------------------------------------------------------------- | -------------- | ---------- |
-| 01  | [Static Analysis-Based Instant Analysis](./01-static-analysis-approach.md)        | Cross-cutting  | 2024-12-17 |
-| 02  | [Competitive Differentiation Strategy](./02-competitive-differentiation.md)       | Cross-cutting  | 2024-12-17 |
-| 03  | [API and Worker Service Separation](./03-api-worker-service-separation.md)        | Architecture   | 2024-12-17 |
-| 04  | [Queue-Based Asynchronous Processing](./04-queue-based-async-processing.md)       | Architecture   | 2024-12-17 |
-| 05  | [Polyrepo Repository Strategy](./05-repository-strategy.md)                       | Architecture   | 2024-12-17 |
-| 06  | [PaaS-First Infrastructure Strategy](./06-paas-first-infrastructure.md)           | Infrastructure | 2024-12-17 |
-| 07  | [Shared Infrastructure Strategy](./07-shared-infrastructure.md)                   | Infrastructure | 2024-12-17 |
-| 08  | [External Repository ID-Based Data Integrity](./08-external-repo-id-integrity.md) | Data Integrity | 2024-12-22 |
-| 09  | [GitHub App Integration Strategy](./09-github-app-integration.md)                 | Authentication | 2024-12-29 |
-| 10  | [TestStatus Data Contract](./10-test-status-data-contract.md)                     | Data Integrity | 2024-12-29 |
+| #   | Title                                                                                  | Area           | Date       |
+| --- | -------------------------------------------------------------------------------------- | -------------- | ---------- |
+| 01  | [Static Analysis-Based Instant Analysis](./01-static-analysis-approach.md)             | Cross-cutting  | 2024-12-17 |
+| 02  | [Competitive Differentiation Strategy](./02-competitive-differentiation.md)            | Cross-cutting  | 2024-12-17 |
+| 03  | [API and Worker Service Separation](./03-api-worker-service-separation.md)             | Architecture   | 2024-12-17 |
+| 04  | [Queue-Based Asynchronous Processing](./04-queue-based-async-processing.md)            | Architecture   | 2024-12-17 |
+| 05  | [Polyrepo Repository Strategy](./05-repository-strategy.md)                            | Architecture   | 2024-12-17 |
+| 06  | [PaaS-First Infrastructure Strategy](./06-paas-first-infrastructure.md)                | Infrastructure | 2024-12-17 |
+| 07  | [Shared Infrastructure Strategy](./07-shared-infrastructure.md)                        | Infrastructure | 2024-12-17 |
+| 08  | [External Repository ID-Based Data Integrity](./08-external-repo-id-integrity.md)      | Data Integrity | 2024-12-22 |
+| 09  | [GitHub App Integration Strategy](./09-github-app-integration.md)                      | Authentication | 2024-12-29 |
+| 10  | [TestStatus Data Contract](./10-test-status-data-contract.md)                          | Data Integrity | 2024-12-29 |
+| 11  | [Repository Visibility-Based Access Control](./11-community-private-repo-filtering.md) | Security       | 2026-01-03 |
 
 ### Core Repository
 

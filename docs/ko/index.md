@@ -40,6 +40,7 @@ Specvital 개발 중 내린 아키텍처 결정에 대한 문서.
 - [External Repo ID 무결성](./adr/08-external-repo-id-integrity.md)
 - [GitHub App 통합](./adr/09-github-app-integration.md)
 - [TestStatus 데이터 계약](./adr/10-test-status-data-contract.md)
+- [Repository Visibility 기반 접근 제어](./adr/11-community-private-repo-filtering.md)
 
 **[Core](./adr/core/)**
 
