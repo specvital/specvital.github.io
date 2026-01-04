@@ -59,6 +59,7 @@ Specvital 개발 중 내린 아키텍처 결정에 대한 문서.
 - [Worker Pool 병렬 스캔](./adr/core/12-parallel-scanning-worker-pool.md)
 - [NaCl SecretBox 암호화](./adr/core/13-nacl-secretbox-encryption.md)
 - [간접 Import Alias 감지 미지원](./adr/core/14-indirect-import-unsupported.md)
+- [C# 전처리기 블록 내 Attribute 감지 한계](./adr/core/15-csharp-preprocessor-attribute-limitation.md)
 
 **[Collector](./adr/collector/)**
 

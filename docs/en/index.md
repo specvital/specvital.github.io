@@ -59,6 +59,7 @@ Documentation of architectural decisions made during the development of Specvita
 - [Parallel Scanning with Worker Pool](./adr/core/12-parallel-scanning-worker-pool.md)
 - [NaCl SecretBox Encryption](./adr/core/13-nacl-secretbox-encryption.md)
 - [Indirect Import Alias Detection Unsupported](./adr/core/14-indirect-import-unsupported.md)
+- [C# Preprocessor Block Attribute Detection Limitation](./adr/core/15-csharp-preprocessor-attribute-limitation.md)
 
 **[Collector](./adr/collector/)**
 

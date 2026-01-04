@@ -111,6 +111,7 @@ export default defineConfig({
                     { text: "Parallel Scanning", link: "/en/adr/core/12-parallel-scanning-worker-pool" },
                     { text: "NaCl SecretBox Encryption", link: "/en/adr/core/13-nacl-secretbox-encryption" },
                     { text: "Indirect Import Unsupported", link: "/en/adr/core/14-indirect-import-unsupported" },
+                    { text: "C# Preprocessor Limitation", link: "/en/adr/core/15-csharp-preprocessor-attribute-limitation" },
                   ],
                 },
                 {
@@ -247,6 +248,7 @@ export default defineConfig({
                     { text: "병렬 스캐닝", link: "/ko/adr/core/12-parallel-scanning-worker-pool" },
                     { text: "NaCl SecretBox 암호화", link: "/ko/adr/core/13-nacl-secretbox-encryption" },
                     { text: "간접 Import 미지원", link: "/ko/adr/core/14-indirect-import-unsupported" },
+                    { text: "C# 전처리기 한계", link: "/ko/adr/core/15-csharp-preprocessor-attribute-limitation" },
                   ],
                 },
                 {
