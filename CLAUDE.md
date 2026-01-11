@@ -38,7 +38,7 @@ docs/
 │   ├── prd/                 # Product Requirements Document
 │   └── adr/                 # Architecture Decision Records
 │       ├── core/            # Core microservice ADR
-│       ├── collector/       # Collector microservice ADR
+│       ├── worker/          # Worker microservice ADR
 │       └── web/             # Web microservice ADR
 └── ko/                      # Korean docs (mirrors en/ structure)
 ```
@@ -73,14 +73,14 @@ docs/
 ☐ docs/ko/index.md                 ← Homepage (ADR links section)
 ☐ docs/en/adr/index.md             ← ADR overview (repository section)
 ☐ docs/ko/adr/index.md             ← ADR overview (repository section)
-☐ docs/en/adr/{category}/index.md  ← Category index (core/collector/web)
-☐ docs/ko/adr/{category}/index.md  ← Category index (core/collector/web)
+☐ docs/en/adr/{category}/index.md  ← Category index (core/worker/web)
+☐ docs/ko/adr/{category}/index.md  ← Category index (core/worker/web)
 ```
 
 **Concrete examples:**
 
 - For `adr/core/13-xxx.md`: Update 6 files (both homepage + adr/index + adr/core/index)
-- For `adr/collector/08-xxx.md`: Update 6 files (both homepage + adr/index + adr/collector/index)
+- For `adr/worker/08-xxx.md`: Update 6 files (both homepage + adr/index + adr/worker/index)
 - For `adr/web/02-xxx.md`: Update 6 files (both homepage + adr/index + adr/web/index)
 
 #### For PRD Documents (e.g., `prd/07-xxx.md`)
@@ -96,11 +96,11 @@ docs/
 
 **Step 4: Verification (File Count Check)**
 
-| Document Type            | Files to Update | Breakdown                                   |
-| ------------------------ | --------------- | ------------------------------------------- |
-| ADR (core/collector/web) | **6 files**     | 2 homepage + 2 adr/index + 2 category/index |
-| Root ADR (adr/XX.md)     | **4 files**     | 2 homepage + 2 adr/index                    |
-| PRD                      | **4 files**     | 2 homepage + 2 prd/index                    |
+| Document Type         | Files to Update | Breakdown                                   |
+| --------------------- | --------------- | ------------------------------------------- |
+| ADR (core/worker/web) | **6 files**     | 2 homepage + 2 adr/index + 2 category/index |
+| Root ADR (adr/XX.md)  | **4 files**     | 2 homepage + 2 adr/index                    |
+| PRD                   | **4 files**     | 2 homepage + 2 prd/index                    |
 
 > **RED FLAG CHECK:**
 >

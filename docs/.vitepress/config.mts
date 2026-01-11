@@ -52,7 +52,7 @@ export default defineConfig({
                 { text: "Architecture", link: "/en/prd/01-architecture" },
                 { text: "Core Engine", link: "/en/prd/02-core-engine" },
                 { text: "Web Platform", link: "/en/prd/03-web-platform" },
-                { text: "Collector Service", link: "/en/prd/04-collector-service" },
+                { text: "Worker Service", link: "/en/prd/04-worker-service" },
                 { text: "Database Design", link: "/en/prd/05-database-design" },
                 { text: "Tech Stack", link: "/en/prd/06-tech-stack" },
               ],
@@ -89,8 +89,8 @@ export default defineConfig({
                   link: "/en/adr/11-community-private-repo-filtering",
                 },
                 {
-                  text: "Collector-Centric Lifecycle",
-                  link: "/en/adr/12-collector-centric-analysis-lifecycle",
+                  text: "Worker-Centric Lifecycle",
+                  link: "/en/adr/12-worker-centric-analysis-lifecycle",
                 },
                 {
                   text: "Core",
@@ -115,32 +115,32 @@ export default defineConfig({
                   ],
                 },
                 {
-                  text: "Collector",
+                  text: "Worker",
                   collapsed: true,
                   items: [
-                    { text: "Overview", link: "/en/adr/collector/" },
+                    { text: "Overview", link: "/en/adr/worker/" },
                     {
-                      text: "Scheduled Re-collection",
-                      link: "/en/adr/collector/01-scheduled-recollection",
+                      text: "Scheduled Re-analysis",
+                      link: "/en/adr/worker/01-scheduled-recollection",
                     },
                     {
                       text: "Clean Architecture Layers",
-                      link: "/en/adr/collector/02-clean-architecture-layers",
+                      link: "/en/adr/worker/02-clean-architecture-layers",
                     },
-                    { text: "Graceful Shutdown", link: "/en/adr/collector/03-graceful-shutdown" },
+                    { text: "Graceful Shutdown", link: "/en/adr/worker/03-graceful-shutdown" },
                     {
                       text: "OAuth Token Degradation",
-                      link: "/en/adr/collector/04-oauth-token-graceful-degradation",
+                      link: "/en/adr/worker/04-oauth-token-graceful-degradation",
                     },
                     {
-                      text: "Worker-Scheduler Separation",
-                      link: "/en/adr/collector/05-worker-scheduler-separation",
+                      text: "Analyzer-Scheduler Separation",
+                      link: "/en/adr/worker/05-worker-scheduler-separation",
                     },
                     {
                       text: "Semaphore Clone Concurrency",
-                      link: "/en/adr/collector/06-semaphore-clone-concurrency",
+                      link: "/en/adr/worker/06-semaphore-clone-concurrency",
                     },
-                    { text: "Repository Pattern", link: "/en/adr/collector/07-repository-pattern" },
+                    { text: "Repository Pattern", link: "/en/adr/worker/07-repository-pattern" },
                   ],
                 },
                 {
@@ -207,7 +207,7 @@ export default defineConfig({
                 { text: "아키텍처", link: "/ko/prd/01-architecture" },
                 { text: "코어 엔진", link: "/ko/prd/02-core-engine" },
                 { text: "웹 플랫폼", link: "/ko/prd/03-web-platform" },
-                { text: "컬렉터 서비스", link: "/ko/prd/04-collector-service" },
+                { text: "워커 서비스", link: "/ko/prd/04-worker-service" },
                 { text: "데이터베이스 설계", link: "/ko/prd/05-database-design" },
                 { text: "기술 스택", link: "/ko/prd/06-tech-stack" },
               ],
@@ -228,7 +228,7 @@ export default defineConfig({
                 { text: "GitHub App 통합", link: "/ko/adr/09-github-app-integration" },
                 { text: "TestStatus 데이터 계약", link: "/ko/adr/10-test-status-data-contract" },
                 { text: "Visibility 접근 제어", link: "/ko/adr/11-community-private-repo-filtering" },
-                { text: "Collector 중심 라이프사이클", link: "/ko/adr/12-collector-centric-analysis-lifecycle" },
+                { text: "Worker 중심 라이프사이클", link: "/ko/adr/12-worker-centric-analysis-lifecycle" },
                 {
                   text: "Core",
                   collapsed: true,
@@ -252,32 +252,32 @@ export default defineConfig({
                   ],
                 },
                 {
-                  text: "Collector",
+                  text: "Worker",
                   collapsed: true,
                   items: [
-                    { text: "개요", link: "/ko/adr/collector/" },
+                    { text: "개요", link: "/ko/adr/worker/" },
                     {
-                      text: "스케줄 기반 재수집",
-                      link: "/ko/adr/collector/01-scheduled-recollection",
+                      text: "스케줄 기반 재분석",
+                      link: "/ko/adr/worker/01-scheduled-recollection",
                     },
                     {
                       text: "Clean Architecture 레이어",
-                      link: "/ko/adr/collector/02-clean-architecture-layers",
+                      link: "/ko/adr/worker/02-clean-architecture-layers",
                     },
-                    { text: "Graceful Shutdown", link: "/ko/adr/collector/03-graceful-shutdown" },
+                    { text: "Graceful Shutdown", link: "/ko/adr/worker/03-graceful-shutdown" },
                     {
                       text: "OAuth 토큰 Degradation",
-                      link: "/ko/adr/collector/04-oauth-token-graceful-degradation",
+                      link: "/ko/adr/worker/04-oauth-token-graceful-degradation",
                     },
                     {
-                      text: "Worker-Scheduler 분리",
-                      link: "/ko/adr/collector/05-worker-scheduler-separation",
+                      text: "Analyzer-Scheduler 분리",
+                      link: "/ko/adr/worker/05-worker-scheduler-separation",
                     },
                     {
                       text: "Semaphore Clone 동시성",
-                      link: "/ko/adr/collector/06-semaphore-clone-concurrency",
+                      link: "/ko/adr/worker/06-semaphore-clone-concurrency",
                     },
-                    { text: "Repository 패턴", link: "/ko/adr/collector/07-repository-pattern" },
+                    { text: "Repository 패턴", link: "/ko/adr/worker/07-repository-pattern" },
                   ],
                 },
                 {
