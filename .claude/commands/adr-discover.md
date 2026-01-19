@@ -175,43 +175,60 @@ Generate ADR candidates list-up document:
 
 **File**: adr-candidates.md at root path
 
+**Language**: Korean (한글)
+
 **Structure**:
-# ADR Candidates
+# ADR 후보 목록
 
-## Overview
-- Analysis date
-- Analysis scope (repositories, timeframe)
-- Total candidates discovered
+## 개요
+- 분석 일자
+- 분석 범위 (레포지토리, 기간)
+- 총 후보 수
 
-## Platform Level ADR Candidates
-[Decisions affecting multiple repositories]
+## P1 - 높은 우선순위 후보
 
-| # | Title | Related Repos | Complexity | Urgency | Priority |
-|---|-------|---------------|------------|---------|----------|
+| # | 제목 | 레포지토리 | 복잡도 | 긴급도 | 가치 | 근거 |
+|---|------|-----------|--------|--------|------|------|
 
-## Repository Level ADR Candidates
+## P2 - 중간 우선순위 후보
 
-### Core
-| # | Title | Complexity | Urgency | Priority |
-|---|-------|------------|---------|----------|
+| # | 제목 | 레포지토리 | 복잡도 | 긴급도 | 가치 | 근거 |
+|---|------|-----------|--------|--------|------|------|
 
-### Worker
+## P3 - 낮은 우선순위 후보
+
+### Core 리포지토리
+| # | 제목 | 복잡도 | 긴급도 | 가치 | 비고 |
+|---|------|--------|--------|------|------|
+
+### Worker 리포지토리
 ...
 
-### Web
+### Web 리포지토리
 ...
 
-### Infra
+### Infrastructure 리포지토리
 ...
 
-## Next Steps
-- [ ] Review high priority items
-- [ ] Schedule ADR writing
+## ADR 번호 할당 (제안)
+
+| 우선순위 | ADR 번호 | 제목 |
+|----------|----------|------|
+
+## 다음 단계
+- [ ] 팀과 P1 우선순위 검토 및 확정
+- [ ] P1 항목 ADR 작성자 지정
+
+## 관련 커밋 요약
+
+| 후보 | 커밋 |
+|------|------|
 
 **Style**:
 - Concise table format
 - Sort by priority
-- English for titles, Korean for notes if needed
+- ALL content in Korean (한글)
+- Technical terms can include English in parentheses
 """)
 ```
 
