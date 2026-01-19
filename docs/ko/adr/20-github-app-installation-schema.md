@@ -3,9 +3,9 @@ title: GitHub App 설치 스키마
 description: GitHub App 설치 라이프사이클 관리를 위한 데이터베이스 스키마 설계 ADR
 ---
 
-# ADR-01: GitHub App 설치 스키마
+# ADR-20: GitHub App 설치 스키마
 
-> 🇺🇸 [English Version](/en/adr/infra/01-github-app-installation-schema.md)
+> 🇺🇸 [English Version](/en/adr/20-github-app-installation-schema.md)
 
 | 날짜       | 작성자     | 레포       |
 | ---------- | ---------- | ---------- |

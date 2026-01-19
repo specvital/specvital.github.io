@@ -74,6 +74,9 @@ XX-brief-decision-title.md
 | 15  | [재분석을 위한 파서 버전 추적](./15-parser-version-tracking.md)                  | Data Integrity | 2026-01-18 |
 | 16  | [멀티큐 우선순위 라우팅 아키텍처](./16-multi-queue-priority-routing.md)          | Architecture   | 2026-01-19 |
 | 17  | [테스트 파일 스키마 정규화](./17-test-file-schema-normalization.md)              | Database       | 2026-01-19 |
+| 18  | [GitHub API 캐시 테이블](./18-github-api-cache-tables.md)                        | Database       | 2025-12-24 |
+| 19  | [계층적 스펙 문서 스키마](./19-hierarchical-spec-document-schema.md)             | Database       | 2026-01-12 |
+| 20  | [GitHub App 설치 스키마](./20-github-app-installation-schema.md)                 | Database       | 2026-01-19 |
 
 ### Core 리포지토리
 
@@ -143,14 +146,6 @@ XX-brief-decision-title.md
 | 23  | [윈도우 레벨 가상화 패턴](./web/23-window-level-virtualization.md)          | Frontend      | 2026-01-19 |
 | 24  | [구독 기간 일할 계산](./web/24-subscription-period-prorata.md)              | Billing       | 2026-01-16 |
 | 25  | [OAuth 리턴 URL 처리](./web/25-oauth-return-url-handling.md)                | Security      | 2026-01-16 |
-
-### Infra 리포지토리
-
-| #   | 제목                                                                       | 영역     | 날짜       |
-| --- | -------------------------------------------------------------------------- | -------- | ---------- |
-| 01  | [GitHub App 설치 스키마](./infra/01-github-app-installation-schema.md)     | Database | 2026-01-19 |
-| 02  | [계층적 스펙 문서 스키마](./infra/02-hierarchical-spec-document-schema.md) | Database | 2026-01-12 |
-| 03  | [GitHub API 캐시 테이블](./infra/03-github-api-cache-tables.md)            | Database | 2025-12-24 |
 
 ## 프로세스
 

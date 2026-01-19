@@ -3,9 +3,9 @@ title: GitHub App Installation Schema
 description: ADR for database schema design for GitHub App installation lifecycle management
 ---
 
-# ADR-01: GitHub App Installation Schema
+# ADR-20: GitHub App Installation Schema
 
-> 🇰🇷 [한국어 버전](/ko/adr/infra/01-github-app-installation-schema.md)
+> 🇰🇷 [한국어 버전](/ko/adr/20-github-app-installation-schema.md)
 
 | Date       | Author     | Repos      |
 | ---------- | ---------- | ---------- |

@@ -113,6 +113,18 @@ export default defineConfig({
                   link: "/en/adr/17-test-file-schema-normalization",
                 },
                 {
+                  text: "GitHub API Cache Tables",
+                  link: "/en/adr/18-github-api-cache-tables",
+                },
+                {
+                  text: "Hierarchical Spec Document Schema",
+                  link: "/en/adr/19-hierarchical-spec-document-schema",
+                },
+                {
+                  text: "GitHub App Installation Schema",
+                  link: "/en/adr/20-github-app-installation-schema",
+                },
+                {
                   text: "Core",
                   collapsed: true,
                   items: [
@@ -202,16 +214,6 @@ export default defineConfig({
                     { text: "OAuth Return URL Handling", link: "/en/adr/web/25-oauth-return-url-handling" },
                   ],
                 },
-                {
-                  text: "Infra",
-                  collapsed: true,
-                  items: [
-                    { text: "Overview", link: "/en/adr/infra/" },
-                    { text: "GitHub App Installation Schema", link: "/en/adr/infra/01-github-app-installation-schema" },
-                    { text: "Hierarchical Spec Document Schema", link: "/en/adr/infra/02-hierarchical-spec-document-schema" },
-                    { text: "GitHub API Cache Tables", link: "/en/adr/infra/03-github-api-cache-tables" },
-                  ],
-                },
               ],
             },
           ],
@@ -276,6 +278,9 @@ export default defineConfig({
                 { text: "파서 버전 추적", link: "/ko/adr/15-parser-version-tracking" },
                 { text: "멀티큐 우선순위 라우팅", link: "/ko/adr/16-multi-queue-priority-routing" },
                 { text: "테스트 파일 스키마 정규화", link: "/ko/adr/17-test-file-schema-normalization" },
+                { text: "GitHub API 캐시 테이블", link: "/ko/adr/18-github-api-cache-tables" },
+                { text: "계층적 스펙 문서 스키마", link: "/ko/adr/19-hierarchical-spec-document-schema" },
+                { text: "GitHub App 설치 스키마", link: "/ko/adr/20-github-app-installation-schema" },
                 {
                   text: "Core",
                   collapsed: true,
@@ -364,16 +369,6 @@ export default defineConfig({
                     { text: "윈도우 레벨 가상화", link: "/ko/adr/web/23-window-level-virtualization" },
                     { text: "구독 기간 일할 계산", link: "/ko/adr/web/24-subscription-period-prorata" },
                     { text: "OAuth 리턴 URL 처리", link: "/ko/adr/web/25-oauth-return-url-handling" },
-                  ],
-                },
-                {
-                  text: "Infra",
-                  collapsed: true,
-                  items: [
-                    { text: "개요", link: "/ko/adr/infra/" },
-                    { text: "GitHub App 설치 스키마", link: "/ko/adr/infra/01-github-app-installation-schema" },
-                    { text: "계층적 스펙 문서 스키마", link: "/ko/adr/infra/02-hierarchical-spec-document-schema" },
-                    { text: "GitHub API 캐시 테이블", link: "/ko/adr/infra/03-github-api-cache-tables" },
                   ],
                 },
               ],

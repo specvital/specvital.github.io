@@ -3,9 +3,9 @@ title: GitHub API Cache Tables
 description: ADR for database-backed cache tables for GitHub API responses
 ---
 
-# ADR-03: GitHub API Cache Tables
+# ADR-18: GitHub API Cache Tables
 
-> 🇰🇷 [한국어 버전](/ko/adr/infra/03-github-api-cache-tables.md)
+> 🇰🇷 [한국어 버전](/ko/adr/18-github-api-cache-tables.md)
 
 | Date       | Author     | Repos      |
 | ---------- | ---------- | ---------- |

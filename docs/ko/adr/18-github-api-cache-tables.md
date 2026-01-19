@@ -3,9 +3,9 @@ title: GitHub API 캐시 테이블
 description: GitHub API 응답을 위한 데이터베이스 캐시 테이블에 관한 ADR
 ---
 
-# ADR-03: GitHub API 캐시 테이블
+# ADR-18: GitHub API 캐시 테이블
 
-> 🇺🇸 [English Version](/en/adr/infra/03-github-api-cache-tables.md)
+> 🇺🇸 [English Version](/en/adr/18-github-api-cache-tables.md)
 
 | 날짜       | 작성자     | 리포지토리 |
 | ---------- | ---------- | ---------- |

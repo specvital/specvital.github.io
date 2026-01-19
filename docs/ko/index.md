@@ -47,6 +47,9 @@ Specvital 개발 중 내린 아키텍처 결정에 대한 문서.
 - [파서 버전 추적](./adr/15-parser-version-tracking.md)
 - [멀티큐 우선순위 라우팅](./adr/16-multi-queue-priority-routing.md)
 - [테스트 파일 스키마 정규화](./adr/17-test-file-schema-normalization.md)
+- [GitHub API 캐시 테이블](./adr/18-github-api-cache-tables.md)
+- [계층적 스펙 문서 스키마](./adr/19-hierarchical-spec-document-schema.md)
+- [GitHub App 설치 스키마](./adr/20-github-app-installation-schema.md)
 
 **[Core](./adr/core/)**
 
@@ -110,12 +113,6 @@ Specvital 개발 중 내린 아키텍처 결정에 대한 문서.
 - [윈도우 레벨 가상화 패턴](./adr/web/23-window-level-virtualization.md)
 - [구독 기간 일할 계산](./adr/web/24-subscription-period-prorata.md)
 - [OAuth 리턴 URL 처리](./adr/web/25-oauth-return-url-handling.md)
-
-**[Infra](./adr/infra/)**
-
-- [GitHub App 설치 스키마](./adr/infra/01-github-app-installation-schema.md)
-- [계층적 스펙 문서 스키마](./adr/infra/02-hierarchical-spec-document-schema.md)
-- [GitHub API 캐시 테이블](./adr/infra/03-github-api-cache-tables.md)
 
 ### [기술 레이더](./tech-radar.md)
 

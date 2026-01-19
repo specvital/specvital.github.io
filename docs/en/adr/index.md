@@ -74,6 +74,9 @@ XX-brief-decision-title.md
 | 15  | [Parser Version Tracking for Re-analysis](./15-parser-version-tracking.md)             | Data Integrity | 2026-01-18 |
 | 16  | [Multi-Queue Priority Routing Architecture](./16-multi-queue-priority-routing.md)      | Architecture   | 2026-01-19 |
 | 17  | [Test File Schema Normalization](./17-test-file-schema-normalization.md)               | Database       | 2026-01-19 |
+| 18  | [GitHub API Cache Tables](./18-github-api-cache-tables.md)                             | Database       | 2025-12-24 |
+| 19  | [Hierarchical Spec Document Schema](./19-hierarchical-spec-document-schema.md)         | Database       | 2026-01-12 |
+| 20  | [GitHub App Installation Schema](./20-github-app-installation-schema.md)               | Database       | 2026-01-19 |
 
 ### Core Repository
 
@@ -143,14 +146,6 @@ XX-brief-decision-title.md
 | 23  | [Window-Level Virtualization Pattern](./web/23-window-level-virtualization.md)      | Frontend      | 2026-01-19 |
 | 24  | [Subscription Period Pro-rata Calculation](./web/24-subscription-period-prorata.md) | Billing       | 2026-01-16 |
 | 25  | [OAuth Return URL Handling](./web/25-oauth-return-url-handling.md)                  | Security      | 2026-01-16 |
-
-### Infra Repository
-
-| #   | Title                                                                                | Area     | Date       |
-| --- | ------------------------------------------------------------------------------------ | -------- | ---------- |
-| 01  | [GitHub App Installation Schema](./infra/01-github-app-installation-schema.md)       | Database | 2026-01-19 |
-| 02  | [Hierarchical Spec Document Schema](./infra/02-hierarchical-spec-document-schema.md) | Database | 2026-01-12 |
-| 03  | [GitHub API Cache Tables](./infra/03-github-api-cache-tables.md)                     | Database | 2025-12-24 |
 
 ## Process
 

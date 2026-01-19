@@ -3,9 +3,9 @@ title: Hierarchical Spec Document Schema
 description: ADR for 4-table normalized database schema supporting BDD-aligned specification document storage
 ---
 
-# ADR-02: Hierarchical Spec Document Schema
+# ADR-19: Hierarchical Spec Document Schema
 
-> 🇰🇷 [한국어 버전](/ko/adr/infra/02-hierarchical-spec-document-schema)
+> 🇰🇷 [한국어 버전](/ko/adr/19-hierarchical-spec-document-schema.md)
 
 | Date       | Author     | Repos              |
 | ---------- | ---------- | ------------------ |

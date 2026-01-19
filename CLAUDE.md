@@ -37,6 +37,7 @@ docs/
 ├── en/                      # English docs
 │   ├── prd/                 # Product Requirements Document
 │   └── adr/                 # Architecture Decision Records
+│       ├── XX-*.md          # Cross-cutting ADR (root level)
 │       ├── core/            # Core microservice ADR
 │       ├── worker/          # Worker microservice ADR
 │       └── web/             # Web microservice ADR
@@ -44,6 +45,17 @@ docs/
 ```
 
 ## Documentation Rules
+
+### CRITICAL: Infra ADR Placement
+
+> **Infra repository has NO standalone ADR folder.**
+
+The `infra` repository contains only shared database schemas and infrastructure configurations. It has no independent business logic, so:
+
+- **Database schema ADR** → Place in **Cross-cutting ADR** (root level `adr/XX-*.md`)
+- **NEVER create** `adr/infra/` folder
+
+**Rationale**: Infra serves all services (core, worker, web). Schema decisions are cross-cutting by nature.
 
 ### CRITICAL: Adding New Documents
 

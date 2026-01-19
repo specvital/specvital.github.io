@@ -47,6 +47,9 @@ Documentation of architectural decisions made during the development of Specvita
 - [Parser Version Tracking](./adr/15-parser-version-tracking.md)
 - [Multi-Queue Priority Routing](./adr/16-multi-queue-priority-routing.md)
 - [Test File Schema Normalization](./adr/17-test-file-schema-normalization.md)
+- [GitHub API Cache Tables](./adr/18-github-api-cache-tables.md)
+- [Hierarchical Spec Document Schema](./adr/19-hierarchical-spec-document-schema.md)
+- [GitHub App Installation Schema](./adr/20-github-app-installation-schema.md)
 
 **[Core](./adr/core/)**
 
@@ -110,12 +113,6 @@ Documentation of architectural decisions made during the development of Specvita
 - [Window-Level Virtualization Pattern](./adr/web/23-window-level-virtualization.md)
 - [Subscription Period Pro-rata Calculation](./adr/web/24-subscription-period-prorata.md)
 - [OAuth Return URL Handling](./adr/web/25-oauth-return-url-handling.md)
-
-**[Infra](./adr/infra/)**
-
-- [GitHub App Installation Schema](./adr/infra/01-github-app-installation-schema.md)
-- [Hierarchical Spec Document Schema](./adr/infra/02-hierarchical-spec-document-schema.md)
-- [GitHub API Cache Tables](./adr/infra/03-github-api-cache-tables.md)
 
 ### [Tech Radar](./tech-radar.md)
 

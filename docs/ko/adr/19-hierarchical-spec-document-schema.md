@@ -3,9 +3,9 @@ title: 계층적 스펙 문서 스키마
 description: BDD 정렬 사양 문서 저장을 위한 4-테이블 정규화 데이터베이스 스키마 ADR
 ---
 
-# ADR-02: 계층적 스펙 문서 스키마
+# ADR-19: 계층적 스펙 문서 스키마
 
-> 🇺🇸 [English Version](/en/adr/infra/02-hierarchical-spec-document-schema)
+> 🇺🇸 [English Version](/en/adr/19-hierarchical-spec-document-schema.md)
 
 | 날짜       | 작성자     | 레포지토리         |
 | ---------- | ---------- | ------------------ |
