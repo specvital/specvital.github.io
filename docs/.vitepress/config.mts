@@ -1,4 +1,4 @@
-import { defineConfig } from "vitepress";
+import { withMermaid } from "vitepress-plugin-mermaid";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -40,7 +40,7 @@ function getSchemaSidebar() {
   ];
 }
 
-export default defineConfig({
+export default withMermaid({
   title: "Specvital",
   description: "Open-source test coverage insights for code review",
 
