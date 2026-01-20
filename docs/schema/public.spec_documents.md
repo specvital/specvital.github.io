@@ -18,20 +18,21 @@
 
 ## Constraints
 
-| Name                              | Type        | Definition                                                          |
-| --------------------------------- | ----------- | ------------------------------------------------------------------- |
-| fk_spec_documents_analysis        | FOREIGN KEY | FOREIGN KEY (analysis_id) REFERENCES analyses(id) ON DELETE CASCADE |
-| spec_documents_pkey               | PRIMARY KEY | PRIMARY KEY (id)                                                    |
-| uq_spec_documents_hash_lang_model | UNIQUE      | UNIQUE (content_hash, language, model_id)                           |
+| Name                                      | Type        | Definition                                                          |
+| ----------------------------------------- | ----------- | ------------------------------------------------------------------- |
+| fk_spec_documents_analysis                | FOREIGN KEY | FOREIGN KEY (analysis_id) REFERENCES analyses(id) ON DELETE CASCADE |
+| spec_documents_pkey                       | PRIMARY KEY | PRIMARY KEY (id)                                                    |
+| uq_spec_documents_analysis_lang_version   | UNIQUE      | UNIQUE (analysis_id, language, version)                             |
+| uq_spec_documents_hash_lang_model_version | UNIQUE      | UNIQUE (content_hash, language, model_id, version)                  |
 
 ## Indexes
 
-| Name                              | Definition                                                                                                                    |
-| --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| spec_documents_pkey               | CREATE UNIQUE INDEX spec_documents_pkey ON public.spec_documents USING btree (id)                                             |
-| uq_spec_documents_hash_lang_model | CREATE UNIQUE INDEX uq_spec_documents_hash_lang_model ON public.spec_documents USING btree (content_hash, language, model_id) |
-| idx_spec_documents_analysis       | CREATE INDEX idx_spec_documents_analysis ON public.spec_documents USING btree (analysis_id)                                   |
-| idx_spec_documents_latest_version | CREATE INDEX idx_spec_documents_latest_version ON public.spec_documents USING btree (analysis_id, language, version)          |
+| Name                                      | Definition                                                                                                                                     |
+| ----------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| spec_documents_pkey                       | CREATE UNIQUE INDEX spec_documents_pkey ON public.spec_documents USING btree (id)                                                              |
+| idx_spec_documents_analysis               | CREATE INDEX idx_spec_documents_analysis ON public.spec_documents USING btree (analysis_id)                                                    |
+| uq_spec_documents_analysis_lang_version   | CREATE UNIQUE INDEX uq_spec_documents_analysis_lang_version ON public.spec_documents USING btree (analysis_id, language, version)              |
+| uq_spec_documents_hash_lang_model_version | CREATE UNIQUE INDEX uq_spec_documents_hash_lang_model_version ON public.spec_documents USING btree (content_hash, language, model_id, version) |
 
 ## Relations
 
