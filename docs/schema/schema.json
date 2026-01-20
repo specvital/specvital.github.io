@@ -1665,22 +1665,22 @@
           "columns": ["id"]
         },
         {
-          "name": "uq_spec_documents_hash_lang_model",
-          "def": "CREATE UNIQUE INDEX uq_spec_documents_hash_lang_model ON public.spec_documents USING btree (content_hash, language, model_id)",
-          "table": "public.spec_documents",
-          "columns": ["content_hash", "language", "model_id"]
-        },
-        {
           "name": "idx_spec_documents_analysis",
           "def": "CREATE INDEX idx_spec_documents_analysis ON public.spec_documents USING btree (analysis_id)",
           "table": "public.spec_documents",
           "columns": ["analysis_id"]
         },
         {
-          "name": "idx_spec_documents_latest_version",
-          "def": "CREATE INDEX idx_spec_documents_latest_version ON public.spec_documents USING btree (analysis_id, language, version)",
+          "name": "uq_spec_documents_analysis_lang_version",
+          "def": "CREATE UNIQUE INDEX uq_spec_documents_analysis_lang_version ON public.spec_documents USING btree (analysis_id, language, version)",
           "table": "public.spec_documents",
           "columns": ["analysis_id", "language", "version"]
+        },
+        {
+          "name": "uq_spec_documents_hash_lang_model_version",
+          "def": "CREATE UNIQUE INDEX uq_spec_documents_hash_lang_model_version ON public.spec_documents USING btree (content_hash, language, model_id, version)",
+          "table": "public.spec_documents",
+          "columns": ["content_hash", "language", "model_id", "version"]
         }
       ],
       "constraints": [
@@ -1702,12 +1702,20 @@
           "columns": ["id"]
         },
         {
-          "name": "uq_spec_documents_hash_lang_model",
+          "name": "uq_spec_documents_analysis_lang_version",
           "type": "UNIQUE",
-          "def": "UNIQUE (content_hash, language, model_id)",
+          "def": "UNIQUE (analysis_id, language, version)",
           "table": "public.spec_documents",
           "referenced_table": "",
-          "columns": ["content_hash", "language", "model_id"]
+          "columns": ["analysis_id", "language", "version"]
+        },
+        {
+          "name": "uq_spec_documents_hash_lang_model_version",
+          "type": "UNIQUE",
+          "def": "UNIQUE (content_hash, language, model_id, version)",
+          "table": "public.spec_documents",
+          "referenced_table": "",
+          "columns": ["content_hash", "language", "model_id", "version"]
         }
       ]
     },
