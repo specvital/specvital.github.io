@@ -4,22 +4,22 @@
 
 ## Columns
 
-| Name | Type | Default | Nullable | Children | Parents | Comment |
-| ---- | ---- | ------- | -------- | -------- | ------- | ------- |
-| key | varchar(100) |  | false |  |  |  |
-| value | text |  | false |  |  |  |
-| updated_at | timestamp with time zone | now() | false |  |  |  |
+| Name       | Type                     | Default | Nullable | Children | Parents | Comment |
+| ---------- | ------------------------ | ------- | -------- | -------- | ------- | ------- |
+| key        | varchar(100)             |         | false    |          |         |         |
+| value      | text                     |         | false    |          |         |         |
+| updated_at | timestamp with time zone | now()   | false    |          |         |         |
 
 ## Constraints
 
-| Name | Type | Definition |
-| ---- | ---- | ---------- |
+| Name               | Type        | Definition        |
+| ------------------ | ----------- | ----------------- |
 | system_config_pkey | PRIMARY KEY | PRIMARY KEY (key) |
 
 ## Indexes
 
-| Name | Definition |
-| ---- | ---------- |
+| Name               | Definition                                                                       |
+| ------------------ | -------------------------------------------------------------------------------- |
 | system_config_pkey | CREATE UNIQUE INDEX system_config_pkey ON public.system_config USING btree (key) |
 
 ## Relations

@@ -4,30 +4,30 @@
 
 ## Columns
 
-| Name | Type | Default | Nullable | Children | Parents | Comment |
-| ---- | ---- | ------- | -------- | -------- | ------- | ------- |
-| id | uuid | gen_random_uuid() | false | [public.oauth_accounts](public.oauth_accounts.md) [public.user_bookmarks](public.user_bookmarks.md) [public.user_analysis_history](public.user_analysis_history.md) [public.user_github_org_memberships](public.user_github_org_memberships.md) [public.user_github_repositories](public.user_github_repositories.md) [public.github_app_installations](public.github_app_installations.md) [public.refresh_tokens](public.refresh_tokens.md) [public.user_specview_history](public.user_specview_history.md) [public.usage_events](public.usage_events.md) [public.user_subscriptions](public.user_subscriptions.md) |  |  |
-| email | varchar(255) |  | true |  |  |  |
-| username | varchar(255) |  | false |  |  |  |
-| avatar_url | text |  | true |  |  |  |
-| last_login_at | timestamp with time zone |  | true |  |  |  |
-| created_at | timestamp with time zone | now() | false |  |  |  |
-| updated_at | timestamp with time zone | now() | false |  |  |  |
-| token_version | integer | 1 | false |  |  |  |
+| Name          | Type                     | Default           | Nullable | Children                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | Parents | Comment |
+| ------------- | ------------------------ | ----------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | ------- |
+| id            | uuid                     | gen_random_uuid() | false    | [public.oauth_accounts](public.oauth_accounts.md) [public.user_bookmarks](public.user_bookmarks.md) [public.user_analysis_history](public.user_analysis_history.md) [public.user_github_org_memberships](public.user_github_org_memberships.md) [public.user_github_repositories](public.user_github_repositories.md) [public.github_app_installations](public.github_app_installations.md) [public.refresh_tokens](public.refresh_tokens.md) [public.user_specview_history](public.user_specview_history.md) [public.usage_events](public.usage_events.md) [public.user_subscriptions](public.user_subscriptions.md) |         |         |
+| email         | varchar(255)             |                   | true     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |         |         |
+| username      | varchar(255)             |                   | false    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |         |         |
+| avatar_url    | text                     |                   | true     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |         |         |
+| last_login_at | timestamp with time zone |                   | true     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |         |         |
+| created_at    | timestamp with time zone | now()             | false    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |         |         |
+| updated_at    | timestamp with time zone | now()             | false    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |         |         |
+| token_version | integer                  | 1                 | false    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |         |         |
 
 ## Constraints
 
-| Name | Type | Definition |
-| ---- | ---- | ---------- |
+| Name       | Type        | Definition       |
+| ---------- | ----------- | ---------------- |
 | users_pkey | PRIMARY KEY | PRIMARY KEY (id) |
 
 ## Indexes
 
-| Name | Definition |
-| ---- | ---------- |
-| users_pkey | CREATE UNIQUE INDEX users_pkey ON public.users USING btree (id) |
-| idx_users_email | CREATE UNIQUE INDEX idx_users_email ON public.users USING btree (email) WHERE (email IS NOT NULL) |
-| idx_users_username | CREATE INDEX idx_users_username ON public.users USING btree (username) |
+| Name               | Definition                                                                                        |
+| ------------------ | ------------------------------------------------------------------------------------------------- |
+| users_pkey         | CREATE UNIQUE INDEX users_pkey ON public.users USING btree (id)                                   |
+| idx_users_email    | CREATE UNIQUE INDEX idx_users_email ON public.users USING btree (email) WHERE (email IS NOT NULL) |
+| idx_users_username | CREATE INDEX idx_users_username ON public.users USING btree (username)                            |
 
 ## Relations
 

@@ -2,45 +2,45 @@
 
 ## Tables
 
-| Name | Columns | Comment | Type |
-| ---- | ------- | ------- | ---- |
-| [atlas_schema_revisions.atlas_schema_revisions](atlas_schema_revisions.atlas_schema_revisions.md) | 12 |  | BASE TABLE |
-| [public.codebases](public.codebases.md) | 11 |  | BASE TABLE |
-| [public.analyses](public.analyses.md) | 13 |  | BASE TABLE |
-| [public.test_suites](public.test_suites.md) | 6 |  | BASE TABLE |
-| [public.test_cases](public.test_cases.md) | 7 |  | BASE TABLE |
-| [public.users](public.users.md) | 8 |  | BASE TABLE |
-| [public.oauth_accounts](public.oauth_accounts.md) | 9 |  | BASE TABLE |
-| [public.user_bookmarks](public.user_bookmarks.md) | 4 |  | BASE TABLE |
-| [public.user_analysis_history](public.user_analysis_history.md) | 5 |  | BASE TABLE |
-| [public.github_organizations](public.github_organizations.md) | 8 |  | BASE TABLE |
-| [public.user_github_org_memberships](public.user_github_org_memberships.md) | 6 |  | BASE TABLE |
-| [public.user_github_repositories](public.user_github_repositories.md) | 20 |  | BASE TABLE |
-| [public.github_app_installations](public.github_app_installations.md) | 10 |  | BASE TABLE |
-| [public.refresh_tokens](public.refresh_tokens.md) | 8 |  | BASE TABLE |
-| [public.test_files](public.test_files.md) | 5 |  | BASE TABLE |
-| [public.system_config](public.system_config.md) | 3 |  | BASE TABLE |
-| [public.spec_documents](public.spec_documents.md) | 8 |  | BASE TABLE |
-| [public.spec_domains](public.spec_domains.md) | 8 |  | BASE TABLE |
-| [public.spec_features](public.spec_features.md) | 7 |  | BASE TABLE |
-| [public.spec_behaviors](public.spec_behaviors.md) | 7 |  | BASE TABLE |
-| [public.user_specview_history](public.user_specview_history.md) | 5 |  | BASE TABLE |
-| [public.usage_events](public.usage_events.md) | 7 |  | BASE TABLE |
-| [public.subscription_plans](public.subscription_plans.md) | 7 |  | BASE TABLE |
-| [public.user_subscriptions](public.user_subscriptions.md) | 9 |  | BASE TABLE |
+| Name                                                                                              | Columns | Comment | Type       |
+| ------------------------------------------------------------------------------------------------- | ------- | ------- | ---------- |
+| [atlas_schema_revisions.atlas_schema_revisions](atlas_schema_revisions.atlas_schema_revisions.md) | 12      |         | BASE TABLE |
+| [public.codebases](public.codebases.md)                                                           | 11      |         | BASE TABLE |
+| [public.analyses](public.analyses.md)                                                             | 13      |         | BASE TABLE |
+| [public.test_suites](public.test_suites.md)                                                       | 6       |         | BASE TABLE |
+| [public.test_cases](public.test_cases.md)                                                         | 7       |         | BASE TABLE |
+| [public.users](public.users.md)                                                                   | 8       |         | BASE TABLE |
+| [public.oauth_accounts](public.oauth_accounts.md)                                                 | 9       |         | BASE TABLE |
+| [public.user_bookmarks](public.user_bookmarks.md)                                                 | 4       |         | BASE TABLE |
+| [public.user_analysis_history](public.user_analysis_history.md)                                   | 5       |         | BASE TABLE |
+| [public.github_organizations](public.github_organizations.md)                                     | 8       |         | BASE TABLE |
+| [public.user_github_org_memberships](public.user_github_org_memberships.md)                       | 6       |         | BASE TABLE |
+| [public.user_github_repositories](public.user_github_repositories.md)                             | 20      |         | BASE TABLE |
+| [public.github_app_installations](public.github_app_installations.md)                             | 10      |         | BASE TABLE |
+| [public.refresh_tokens](public.refresh_tokens.md)                                                 | 8       |         | BASE TABLE |
+| [public.test_files](public.test_files.md)                                                         | 5       |         | BASE TABLE |
+| [public.system_config](public.system_config.md)                                                   | 3       |         | BASE TABLE |
+| [public.spec_documents](public.spec_documents.md)                                                 | 8       |         | BASE TABLE |
+| [public.spec_domains](public.spec_domains.md)                                                     | 8       |         | BASE TABLE |
+| [public.spec_features](public.spec_features.md)                                                   | 7       |         | BASE TABLE |
+| [public.spec_behaviors](public.spec_behaviors.md)                                                 | 7       |         | BASE TABLE |
+| [public.user_specview_history](public.user_specview_history.md)                                   | 5       |         | BASE TABLE |
+| [public.usage_events](public.usage_events.md)                                                     | 7       |         | BASE TABLE |
+| [public.subscription_plans](public.subscription_plans.md)                                         | 7       |         | BASE TABLE |
+| [public.user_subscriptions](public.user_subscriptions.md)                                         | 9       |         | BASE TABLE |
 
 ## Enums
 
-| Name | Values |
-| ---- | ------- |
-| public.analysis_status | completed, failed, pending, running |
-| public.github_account_type | organization, user |
-| public.oauth_provider | github |
-| public.plan_tier | enterprise, free, pro, pro_plus |
-| public.river_job_state | available, cancelled, completed, discarded, pending, retryable, running, scheduled |
-| public.subscription_status | active, canceled, expired |
-| public.test_status | active, focused, skipped, todo, xfail |
-| public.usage_event_type | analysis, specview |
+| Name                       | Values                                                                             |
+| -------------------------- | ---------------------------------------------------------------------------------- |
+| public.analysis_status     | completed, failed, pending, running                                                |
+| public.github_account_type | organization, user                                                                 |
+| public.oauth_provider      | github                                                                             |
+| public.plan_tier           | enterprise, free, pro, pro_plus                                                    |
+| public.river_job_state     | available, cancelled, completed, discarded, pending, retryable, running, scheduled |
+| public.subscription_status | active, canceled, expired                                                          |
+| public.test_status         | active, focused, skipped, todo, xfail                                              |
+| public.usage_event_type    | analysis, specview                                                                 |
 
 ## Relations
 
