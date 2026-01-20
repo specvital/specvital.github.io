@@ -379,6 +379,11 @@ export default defineConfig({
                 },
               ],
             },
+            {
+              text: "Schema",
+              collapsed: true,
+              items: getSchemaSidebar()[0].items,
+            },
           ],
         },
       },
@@ -635,6 +640,11 @@ export default defineConfig({
                   ],
                 },
               ],
+            },
+            {
+              text: "Schema",
+              collapsed: true,
+              items: getSchemaSidebar()[0].items,
             },
           ],
         },
