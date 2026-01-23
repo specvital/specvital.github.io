@@ -20,7 +20,7 @@
 | [public.refresh_tokens](public.refresh_tokens.md)                                                 | 8       |         | BASE TABLE |
 | [public.test_files](public.test_files.md)                                                         | 5       |         | BASE TABLE |
 | [public.system_config](public.system_config.md)                                                   | 3       |         | BASE TABLE |
-| [public.spec_documents](public.spec_documents.md)                                                 | 9       |         | BASE TABLE |
+| [public.spec_documents](public.spec_documents.md)                                                 | 10      |         | BASE TABLE |
 | [public.spec_domains](public.spec_domains.md)                                                     | 8       |         | BASE TABLE |
 | [public.spec_features](public.spec_features.md)                                                   | 7       |         | BASE TABLE |
 | [public.spec_behaviors](public.spec_behaviors.md)                                                 | 7       |         | BASE TABLE |
@@ -65,6 +65,7 @@ erDiagram
 "public.refresh_tokens" }o--o| "public.refresh_tokens" : "FOREIGN KEY (replaces) REFERENCES refresh_tokens(id) ON DELETE SET NULL"
 "public.test_files" }o--|| "public.analyses" : "FOREIGN KEY (analysis_id) REFERENCES analyses(id) ON DELETE CASCADE"
 "public.spec_documents" }o--|| "public.analyses" : "FOREIGN KEY (analysis_id) REFERENCES analyses(id) ON DELETE CASCADE"
+"public.spec_documents" }o--|| "public.users" : "FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE"
 "public.spec_domains" }o--|| "public.spec_documents" : "FOREIGN KEY (document_id) REFERENCES spec_documents(id) ON DELETE CASCADE"
 "public.spec_features" }o--|| "public.spec_domains" : "FOREIGN KEY (domain_id) REFERENCES spec_domains(id) ON DELETE CASCADE"
 "public.spec_behaviors" }o--o| "public.test_cases" : "FOREIGN KEY (source_test_case_id) REFERENCES test_cases(id) ON DELETE SET NULL"
@@ -254,6 +255,7 @@ erDiagram
   timestamp_with_time_zone created_at
   timestamp_with_time_zone updated_at
   integer version
+  uuid user_id FK
 }
 "public.spec_domains" {
   uuid id

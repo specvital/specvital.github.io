@@ -1655,6 +1655,11 @@
           "type": "integer",
           "nullable": false,
           "default": "1"
+        },
+        {
+          "name": "user_id",
+          "type": "uuid",
+          "nullable": false
         }
       ],
       "indexes": [
@@ -1671,16 +1676,22 @@
           "columns": ["analysis_id"]
         },
         {
-          "name": "uq_spec_documents_analysis_lang_version",
-          "def": "CREATE UNIQUE INDEX uq_spec_documents_analysis_lang_version ON public.spec_documents USING btree (analysis_id, language, version)",
+          "name": "uq_spec_documents_user_analysis_lang_version",
+          "def": "CREATE UNIQUE INDEX uq_spec_documents_user_analysis_lang_version ON public.spec_documents USING btree (user_id, analysis_id, language, version)",
           "table": "public.spec_documents",
-          "columns": ["analysis_id", "language", "version"]
+          "columns": ["user_id", "analysis_id", "language", "version"]
         },
         {
-          "name": "uq_spec_documents_hash_lang_model_version",
-          "def": "CREATE UNIQUE INDEX uq_spec_documents_hash_lang_model_version ON public.spec_documents USING btree (content_hash, language, model_id, version)",
+          "name": "uq_spec_documents_user_hash_lang_model_version",
+          "def": "CREATE UNIQUE INDEX uq_spec_documents_user_hash_lang_model_version ON public.spec_documents USING btree (user_id, content_hash, language, model_id, version)",
           "table": "public.spec_documents",
-          "columns": ["content_hash", "language", "model_id", "version"]
+          "columns": ["user_id", "content_hash", "language", "model_id", "version"]
+        },
+        {
+          "name": "idx_spec_documents_user_created",
+          "def": "CREATE INDEX idx_spec_documents_user_created ON public.spec_documents USING btree (user_id, created_at)",
+          "table": "public.spec_documents",
+          "columns": ["user_id", "created_at"]
         }
       ],
       "constraints": [
@@ -1694,6 +1705,15 @@
           "referenced_columns": ["id"]
         },
         {
+          "name": "fk_spec_documents_user",
+          "type": "FOREIGN KEY",
+          "def": "FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE",
+          "table": "public.spec_documents",
+          "referenced_table": "users",
+          "columns": ["user_id"],
+          "referenced_columns": ["id"]
+        },
+        {
           "name": "spec_documents_pkey",
           "type": "PRIMARY KEY",
           "def": "PRIMARY KEY (id)",
@@ -1702,20 +1722,20 @@
           "columns": ["id"]
         },
         {
-          "name": "uq_spec_documents_analysis_lang_version",
+          "name": "uq_spec_documents_user_analysis_lang_version",
           "type": "UNIQUE",
-          "def": "UNIQUE (analysis_id, language, version)",
+          "def": "UNIQUE (user_id, analysis_id, language, version)",
           "table": "public.spec_documents",
           "referenced_table": "",
-          "columns": ["analysis_id", "language", "version"]
+          "columns": ["user_id", "analysis_id", "language", "version"]
         },
         {
-          "name": "uq_spec_documents_hash_lang_model_version",
+          "name": "uq_spec_documents_user_hash_lang_model_version",
           "type": "UNIQUE",
-          "def": "UNIQUE (content_hash, language, model_id, version)",
+          "def": "UNIQUE (user_id, content_hash, language, model_id, version)",
           "table": "public.spec_documents",
           "referenced_table": "",
-          "columns": ["content_hash", "language", "model_id", "version"]
+          "columns": ["user_id", "content_hash", "language", "model_id", "version"]
         }
       ]
     },
@@ -2537,6 +2557,15 @@
       "parent_columns": ["id"],
       "parent_cardinality": "exactly_one",
       "def": "FOREIGN KEY (analysis_id) REFERENCES analyses(id) ON DELETE CASCADE"
+    },
+    {
+      "table": "public.spec_documents",
+      "columns": ["user_id"],
+      "cardinality": "zero_or_more",
+      "parent_table": "public.users",
+      "parent_columns": ["id"],
+      "parent_cardinality": "exactly_one",
+      "def": "FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE"
     },
     {
       "table": "public.spec_domains",
