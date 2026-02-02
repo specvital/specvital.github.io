@@ -80,6 +80,7 @@ erDiagram
   timestamp_with_time_zone created_at
   timestamp_with_time_zone updated_at
   uuid id
+  integer retention_days_at_creation
 }
 "public.user_github_org_memberships" {
   uuid id
@@ -144,6 +145,7 @@ erDiagram
   timestamp_with_time_zone updated_at
   integer version
   uuid user_id FK
+  integer retention_days_at_creation
 }
 "public.user_specview_history" {
   uuid id

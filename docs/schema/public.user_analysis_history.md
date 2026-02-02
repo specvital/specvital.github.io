@@ -4,31 +4,34 @@
 
 ## Columns
 
-| Name        | Type                     | Default           | Nullable | Children | Parents                               | Comment |
-| ----------- | ------------------------ | ----------------- | -------- | -------- | ------------------------------------- | ------- |
-| user_id     | uuid                     |                   | false    |          | [public.users](public.users.md)       |         |
-| analysis_id | uuid                     |                   | false    |          | [public.analyses](public.analyses.md) |         |
-| created_at  | timestamp with time zone | now()             | false    |          |                                       |         |
-| updated_at  | timestamp with time zone | now()             | false    |          |                                       |         |
-| id          | uuid                     | gen_random_uuid() | false    |          |                                       |         |
+| Name                       | Type                     | Default           | Nullable | Children | Parents                               | Comment |
+| -------------------------- | ------------------------ | ----------------- | -------- | -------- | ------------------------------------- | ------- |
+| user_id                    | uuid                     |                   | false    |          | [public.users](public.users.md)       |         |
+| analysis_id                | uuid                     |                   | false    |          | [public.analyses](public.analyses.md) |         |
+| created_at                 | timestamp with time zone | now()             | false    |          |                                       |         |
+| updated_at                 | timestamp with time zone | now()             | false    |          |                                       |         |
+| id                         | uuid                     | gen_random_uuid() | false    |          |                                       |         |
+| retention_days_at_creation | integer                  |                   | true     |          |                                       |         |
 
 ## Constraints
 
-| Name                                   | Type        | Definition                                                          |
-| -------------------------------------- | ----------- | ------------------------------------------------------------------- |
-| fk_user_analysis_history_analysis      | FOREIGN KEY | FOREIGN KEY (analysis_id) REFERENCES analyses(id) ON DELETE CASCADE |
-| fk_user_analysis_history_user          | FOREIGN KEY | FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE        |
-| user_analysis_history_pkey             | PRIMARY KEY | PRIMARY KEY (id)                                                    |
-| uq_user_analysis_history_user_analysis | UNIQUE      | UNIQUE (user_id, analysis_id)                                       |
+| Name                                   | Type        | Definition                                                                         |
+| -------------------------------------- | ----------- | ---------------------------------------------------------------------------------- |
+| chk_retention_days_positive            | CHECK       | CHECK (((retention_days_at_creation IS NULL) OR (retention_days_at_creation > 0))) |
+| fk_user_analysis_history_analysis      | FOREIGN KEY | FOREIGN KEY (analysis_id) REFERENCES analyses(id) ON DELETE CASCADE                |
+| fk_user_analysis_history_user          | FOREIGN KEY | FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE                       |
+| user_analysis_history_pkey             | PRIMARY KEY | PRIMARY KEY (id)                                                                   |
+| uq_user_analysis_history_user_analysis | UNIQUE      | UNIQUE (user_id, analysis_id)                                                      |
 
 ## Indexes
 
-| Name                                   | Definition                                                                                                                    |
-| -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| idx_user_analysis_history_analysis     | CREATE INDEX idx_user_analysis_history_analysis ON public.user_analysis_history USING btree (analysis_id)                     |
-| user_analysis_history_pkey             | CREATE UNIQUE INDEX user_analysis_history_pkey ON public.user_analysis_history USING btree (id)                               |
-| uq_user_analysis_history_user_analysis | CREATE UNIQUE INDEX uq_user_analysis_history_user_analysis ON public.user_analysis_history USING btree (user_id, analysis_id) |
-| idx_user_analysis_history_cursor       | CREATE INDEX idx_user_analysis_history_cursor ON public.user_analysis_history USING btree (user_id, updated_at, id)           |
+| Name                                        | Definition                                                                                                                                                       |
+| ------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| idx_user_analysis_history_analysis          | CREATE INDEX idx_user_analysis_history_analysis ON public.user_analysis_history USING btree (analysis_id)                                                        |
+| user_analysis_history_pkey                  | CREATE UNIQUE INDEX user_analysis_history_pkey ON public.user_analysis_history USING btree (id)                                                                  |
+| uq_user_analysis_history_user_analysis      | CREATE UNIQUE INDEX uq_user_analysis_history_user_analysis ON public.user_analysis_history USING btree (user_id, analysis_id)                                    |
+| idx_user_analysis_history_cursor            | CREATE INDEX idx_user_analysis_history_cursor ON public.user_analysis_history USING btree (user_id, updated_at, id)                                              |
+| idx_user_analysis_history_retention_cleanup | CREATE INDEX idx_user_analysis_history_retention_cleanup ON public.user_analysis_history USING btree (created_at) WHERE (retention_days_at_creation IS NOT NULL) |
 
 ## Relations
 
@@ -44,6 +47,7 @@ erDiagram
   timestamp_with_time_zone created_at
   timestamp_with_time_zone updated_at
   uuid id
+  integer retention_days_at_creation
 }
 "public.users" {
   uuid id
