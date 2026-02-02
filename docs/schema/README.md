@@ -12,7 +12,7 @@
 | [public.users](public.users.md)                                                                   | 8       |         | BASE TABLE |
 | [public.oauth_accounts](public.oauth_accounts.md)                                                 | 9       |         | BASE TABLE |
 | [public.user_bookmarks](public.user_bookmarks.md)                                                 | 4       |         | BASE TABLE |
-| [public.user_analysis_history](public.user_analysis_history.md)                                   | 5       |         | BASE TABLE |
+| [public.user_analysis_history](public.user_analysis_history.md)                                   | 6       |         | BASE TABLE |
 | [public.github_organizations](public.github_organizations.md)                                     | 8       |         | BASE TABLE |
 | [public.user_github_org_memberships](public.user_github_org_memberships.md)                       | 6       |         | BASE TABLE |
 | [public.user_github_repositories](public.user_github_repositories.md)                             | 20      |         | BASE TABLE |
@@ -20,7 +20,7 @@
 | [public.refresh_tokens](public.refresh_tokens.md)                                                 | 8       |         | BASE TABLE |
 | [public.test_files](public.test_files.md)                                                         | 5       |         | BASE TABLE |
 | [public.system_config](public.system_config.md)                                                   | 3       |         | BASE TABLE |
-| [public.spec_documents](public.spec_documents.md)                                                 | 10      |         | BASE TABLE |
+| [public.spec_documents](public.spec_documents.md)                                                 | 11      |         | BASE TABLE |
 | [public.spec_domains](public.spec_domains.md)                                                     | 8       |         | BASE TABLE |
 | [public.spec_features](public.spec_features.md)                                                   | 7       |         | BASE TABLE |
 | [public.spec_behaviors](public.spec_behaviors.md)                                                 | 7       |         | BASE TABLE |
@@ -174,6 +174,7 @@ erDiagram
   timestamp_with_time_zone created_at
   timestamp_with_time_zone updated_at
   uuid id
+  integer retention_days_at_creation
 }
 "public.github_organizations" {
   uuid id
@@ -260,6 +261,7 @@ erDiagram
   timestamp_with_time_zone updated_at
   integer version
   uuid user_id FK
+  integer retention_days_at_creation
 }
 "public.spec_domains" {
   uuid id

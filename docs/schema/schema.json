@@ -804,6 +804,11 @@
           "type": "uuid",
           "nullable": false,
           "default": "gen_random_uuid()"
+        },
+        {
+          "name": "retention_days_at_creation",
+          "type": "integer",
+          "nullable": true
         }
       ],
       "indexes": [
@@ -830,9 +835,23 @@
           "def": "CREATE INDEX idx_user_analysis_history_cursor ON public.user_analysis_history USING btree (user_id, updated_at, id)",
           "table": "public.user_analysis_history",
           "columns": ["user_id", "updated_at", "id"]
+        },
+        {
+          "name": "idx_user_analysis_history_retention_cleanup",
+          "def": "CREATE INDEX idx_user_analysis_history_retention_cleanup ON public.user_analysis_history USING btree (created_at) WHERE (retention_days_at_creation IS NOT NULL)",
+          "table": "public.user_analysis_history",
+          "columns": ["created_at"]
         }
       ],
       "constraints": [
+        {
+          "name": "chk_retention_days_positive",
+          "type": "CHECK",
+          "def": "CHECK (((retention_days_at_creation IS NULL) OR (retention_days_at_creation \u003e 0)))",
+          "table": "public.user_analysis_history",
+          "referenced_table": "",
+          "columns": ["retention_days_at_creation"]
+        },
         {
           "name": "fk_user_analysis_history_analysis",
           "type": "FOREIGN KEY",
@@ -1660,6 +1679,11 @@
           "name": "user_id",
           "type": "uuid",
           "nullable": false
+        },
+        {
+          "name": "retention_days_at_creation",
+          "type": "integer",
+          "nullable": true
         }
       ],
       "indexes": [
@@ -1698,9 +1722,23 @@
           "def": "CREATE INDEX idx_spec_documents_content_hash_lang_model ON public.spec_documents USING btree (content_hash, language, model_id)",
           "table": "public.spec_documents",
           "columns": ["content_hash", "language", "model_id"]
+        },
+        {
+          "name": "idx_spec_documents_retention_cleanup",
+          "def": "CREATE INDEX idx_spec_documents_retention_cleanup ON public.spec_documents USING btree (created_at) WHERE (retention_days_at_creation IS NOT NULL)",
+          "table": "public.spec_documents",
+          "columns": ["created_at"]
         }
       ],
       "constraints": [
+        {
+          "name": "chk_retention_days_positive",
+          "type": "CHECK",
+          "def": "CHECK (((retention_days_at_creation IS NULL) OR (retention_days_at_creation \u003e 0)))",
+          "table": "public.spec_documents",
+          "referenced_table": "",
+          "columns": ["retention_days_at_creation"]
+        },
         {
           "name": "fk_spec_documents_analysis",
           "type": "FOREIGN KEY",

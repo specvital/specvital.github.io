@@ -4,28 +4,30 @@
 
 ## Columns
 
-| Name              | Type                     | Default                 | Nullable | Children                                                                                                                                                    | Parents                               | Comment |
-| ----------------- | ------------------------ | ----------------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- | ------- |
-| id                | uuid                     | gen_random_uuid()       | false    | [public.spec_domains](public.spec_domains.md) [public.user_specview_history](public.user_specview_history.md) [public.usage_events](public.usage_events.md) |                                       |         |
-| analysis_id       | uuid                     |                         | false    |                                                                                                                                                             | [public.analyses](public.analyses.md) |         |
-| content_hash      | bytea                    |                         | false    |                                                                                                                                                             |                                       |         |
-| language          | varchar(10)              | 'en'::character varying | false    |                                                                                                                                                             |                                       |         |
-| executive_summary | text                     |                         | true     |                                                                                                                                                             |                                       |         |
-| model_id          | varchar(100)             |                         | false    |                                                                                                                                                             |                                       |         |
-| created_at        | timestamp with time zone | now()                   | false    |                                                                                                                                                             |                                       |         |
-| updated_at        | timestamp with time zone | now()                   | false    |                                                                                                                                                             |                                       |         |
-| version           | integer                  | 1                       | false    |                                                                                                                                                             |                                       |         |
-| user_id           | uuid                     |                         | false    |                                                                                                                                                             | [public.users](public.users.md)       |         |
+| Name                       | Type                     | Default                 | Nullable | Children                                                                                                                                                    | Parents                               | Comment |
+| -------------------------- | ------------------------ | ----------------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- | ------- |
+| id                         | uuid                     | gen_random_uuid()       | false    | [public.spec_domains](public.spec_domains.md) [public.user_specview_history](public.user_specview_history.md) [public.usage_events](public.usage_events.md) |                                       |         |
+| analysis_id                | uuid                     |                         | false    |                                                                                                                                                             | [public.analyses](public.analyses.md) |         |
+| content_hash               | bytea                    |                         | false    |                                                                                                                                                             |                                       |         |
+| language                   | varchar(10)              | 'en'::character varying | false    |                                                                                                                                                             |                                       |         |
+| executive_summary          | text                     |                         | true     |                                                                                                                                                             |                                       |         |
+| model_id                   | varchar(100)             |                         | false    |                                                                                                                                                             |                                       |         |
+| created_at                 | timestamp with time zone | now()                   | false    |                                                                                                                                                             |                                       |         |
+| updated_at                 | timestamp with time zone | now()                   | false    |                                                                                                                                                             |                                       |         |
+| version                    | integer                  | 1                       | false    |                                                                                                                                                             |                                       |         |
+| user_id                    | uuid                     |                         | false    |                                                                                                                                                             | [public.users](public.users.md)       |         |
+| retention_days_at_creation | integer                  |                         | true     |                                                                                                                                                             |                                       |         |
 
 ## Constraints
 
-| Name                                           | Type        | Definition                                                          |
-| ---------------------------------------------- | ----------- | ------------------------------------------------------------------- |
-| fk_spec_documents_analysis                     | FOREIGN KEY | FOREIGN KEY (analysis_id) REFERENCES analyses(id) ON DELETE CASCADE |
-| fk_spec_documents_user                         | FOREIGN KEY | FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE        |
-| spec_documents_pkey                            | PRIMARY KEY | PRIMARY KEY (id)                                                    |
-| uq_spec_documents_user_analysis_lang_version   | UNIQUE      | UNIQUE (user_id, analysis_id, language, version)                    |
-| uq_spec_documents_user_hash_lang_model_version | UNIQUE      | UNIQUE (user_id, content_hash, language, model_id, version)         |
+| Name                                           | Type        | Definition                                                                         |
+| ---------------------------------------------- | ----------- | ---------------------------------------------------------------------------------- |
+| chk_retention_days_positive                    | CHECK       | CHECK (((retention_days_at_creation IS NULL) OR (retention_days_at_creation > 0))) |
+| fk_spec_documents_analysis                     | FOREIGN KEY | FOREIGN KEY (analysis_id) REFERENCES analyses(id) ON DELETE CASCADE                |
+| fk_spec_documents_user                         | FOREIGN KEY | FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE                       |
+| spec_documents_pkey                            | PRIMARY KEY | PRIMARY KEY (id)                                                                   |
+| uq_spec_documents_user_analysis_lang_version   | UNIQUE      | UNIQUE (user_id, analysis_id, language, version)                                   |
+| uq_spec_documents_user_hash_lang_model_version | UNIQUE      | UNIQUE (user_id, content_hash, language, model_id, version)                        |
 
 ## Indexes
 
@@ -37,6 +39,7 @@
 | uq_spec_documents_user_hash_lang_model_version | CREATE UNIQUE INDEX uq_spec_documents_user_hash_lang_model_version ON public.spec_documents USING btree (user_id, content_hash, language, model_id, version) |
 | idx_spec_documents_user_created                | CREATE INDEX idx_spec_documents_user_created ON public.spec_documents USING btree (user_id, created_at)                                                      |
 | idx_spec_documents_content_hash_lang_model     | CREATE INDEX idx_spec_documents_content_hash_lang_model ON public.spec_documents USING btree (content_hash, language, model_id)                              |
+| idx_spec_documents_retention_cleanup           | CREATE INDEX idx_spec_documents_retention_cleanup ON public.spec_documents USING btree (created_at) WHERE (retention_days_at_creation IS NOT NULL)           |
 
 ## Relations
 
@@ -60,6 +63,7 @@ erDiagram
   timestamp_with_time_zone updated_at
   integer version
   uuid user_id FK
+  integer retention_days_at_creation
 }
 "public.spec_domains" {
   uuid id

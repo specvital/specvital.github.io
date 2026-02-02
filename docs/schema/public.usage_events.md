@@ -87,6 +87,7 @@ erDiagram
   timestamp_with_time_zone updated_at
   integer version
   uuid user_id FK
+  integer retention_days_at_creation
 }
 ```
 
