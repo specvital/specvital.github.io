@@ -1,4 +1,5 @@
 ---
+name: adr-discover
 description: Discover ADR candidates across Specvital platform repositories with multi-agent collaboration
 allowed-tools: Read, Write, Glob, Grep, Bash, WebFetch, Task
 ---

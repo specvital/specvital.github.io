@@ -1,4 +1,5 @@
 ---
+name: adr-write
 description: Write ADR document from discovered candidates with GitHub context research
 allowed-tools: Read, Write, Edit, Glob, Grep, Bash, WebFetch, Task
 ---

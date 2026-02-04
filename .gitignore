@@ -3,6 +3,8 @@
 node_modules
 .claude/settings.local.json
 .claude-sessions/
+.claude-session-config.json
+docs/work/
 .local
 
 # VitePress
