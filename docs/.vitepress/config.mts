@@ -407,6 +407,10 @@ export default withMermaid({
                       text: "Commit-Based Analysis Browsing",
                       link: "/en/adr/web/27-commit-based-analysis-browsing",
                     },
+                    {
+                      text: "Dynamic Cost Estimation",
+                      link: "/en/adr/web/28-dynamic-cost-estimation",
+                    },
                   ],
                 },
               ],
@@ -700,6 +704,10 @@ export default withMermaid({
                     {
                       text: "커밋 기반 분석 조회",
                       link: "/ko/adr/web/27-commit-based-analysis-browsing",
+                    },
+                    {
+                      text: "동적 비용 예측",
+                      link: "/ko/adr/web/28-dynamic-cost-estimation",
                     },
                   ],
                 },

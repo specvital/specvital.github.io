@@ -40,6 +40,7 @@ Architecture Decision Records for the [specvital/web](https://github.com/specvit
 | 25  | [OAuth Return URL Handling](./25-oauth-return-url-handling.md)                  | 2026-01-16 |
 | 26  | [Zustand Client State Management](./26-zustand-client-state.md)                 | 2026-01-23 |
 | 27  | [Commit-Based Analysis Browsing](./27-commit-based-analysis-browsing.md)        | 2026-02-03 |
+| 28  | [Dynamic Cost Estimation](./28-dynamic-cost-estimation.md)                      | 2026-02-03 |
 
 ## Related
 

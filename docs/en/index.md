@@ -121,6 +121,7 @@ Documentation of architectural decisions made during the development of Specvita
 - [OAuth Return URL Handling](./adr/web/25-oauth-return-url-handling.md)
 - [Zustand Client State Management](./adr/web/26-zustand-client-state.md)
 - [Commit-Based Analysis Browsing](./adr/web/27-commit-based-analysis-browsing.md)
+- [Dynamic Cost Estimation](./adr/web/28-dynamic-cost-estimation.md)
 
 ### [Tech Radar](./tech-radar.md)
 

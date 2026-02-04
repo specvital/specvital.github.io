@@ -154,6 +154,7 @@ XX-brief-decision-title.md
 | 25  | [OAuth 리턴 URL 처리](./web/25-oauth-return-url-handling.md)                | Security      | 2026-01-16 |
 | 26  | [Zustand 클라이언트 상태 관리](./web/26-zustand-client-state.md)            | Frontend      | 2026-01-23 |
 | 27  | [커밋 기반 분석 조회](./web/27-commit-based-analysis-browsing.md)           | Frontend      | 2026-02-03 |
+| 28  | [동적 비용 예측](./web/28-dynamic-cost-estimation.md)                       | Frontend      | 2026-02-03 |
 
 ## 프로세스
 
