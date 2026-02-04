@@ -119,6 +119,7 @@ Specvital 개발 중 내린 아키텍처 결정에 대한 문서.
 - [구독 기간 일할 계산](./adr/web/24-subscription-period-prorata.md)
 - [OAuth 리턴 URL 처리](./adr/web/25-oauth-return-url-handling.md)
 - [Zustand 클라이언트 상태 관리](./adr/web/26-zustand-client-state.md)
+- [커밋 기반 분석 조회](./adr/web/27-commit-based-analysis-browsing.md)
 
 ### [기술 레이더](./tech-radar.md)
 

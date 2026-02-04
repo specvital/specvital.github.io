@@ -399,6 +399,10 @@ export default withMermaid({
                       text: "Zustand Client State",
                       link: "/en/adr/web/26-zustand-client-state",
                     },
+                    {
+                      text: "Commit-Based Analysis Browsing",
+                      link: "/en/adr/web/27-commit-based-analysis-browsing",
+                    },
                   ],
                 },
               ],
@@ -684,6 +688,10 @@ export default withMermaid({
                     {
                       text: "Zustand 클라이언트 상태",
                       link: "/ko/adr/web/26-zustand-client-state",
+                    },
+                    {
+                      text: "커밋 기반 분석 조회",
+                      link: "/ko/adr/web/27-commit-based-analysis-browsing",
                     },
                   ],
                 },

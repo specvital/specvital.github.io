@@ -152,6 +152,7 @@ XX-brief-decision-title.md
 | 24  | [Subscription Period Pro-rata Calculation](./web/24-subscription-period-prorata.md) | Billing       | 2026-01-16 |
 | 25  | [OAuth Return URL Handling](./web/25-oauth-return-url-handling.md)                  | Security      | 2026-01-16 |
 | 26  | [Zustand Client State Management](./web/26-zustand-client-state.md)                 | Frontend      | 2026-01-23 |
+| 27  | [Commit-Based Analysis Browsing](./web/27-commit-based-analysis-browsing.md)        | Frontend      | 2026-02-03 |
 
 ## Process
 

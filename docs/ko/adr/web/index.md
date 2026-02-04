@@ -39,6 +39,7 @@ description: 웹 플랫폼(대시보드 및 API) 아키텍처 의사결정 기�
 | 24  | [구독 기간 일할 계산](./24-subscription-period-prorata.md)              | 2026-01-16 |
 | 25  | [OAuth 리턴 URL 처리](./25-oauth-return-url-handling.md)                | 2026-01-16 |
 | 26  | [Zustand 클라이언트 상태 관리](./26-zustand-client-state.md)            | 2026-01-23 |
+| 27  | [커밋 기반 분석 조회](./27-commit-based-analysis-browsing.md)           | 2026-02-03 |
 
 ## 관련 문서
 
