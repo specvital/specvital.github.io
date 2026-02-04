@@ -38,6 +38,7 @@ Architecture Decision Records for the [specvital/web](https://github.com/specvit
 | 23  | [Window-Level Virtualization Pattern](./23-window-level-virtualization.md)      | 2026-01-19 |
 | 24  | [Subscription Period Pro-rata Calculation](./24-subscription-period-prorata.md) | 2026-01-16 |
 | 25  | [OAuth Return URL Handling](./25-oauth-return-url-handling.md)                  | 2026-01-16 |
+| 26  | [Zustand Client State Management](./26-zustand-client-state.md)                 | 2026-01-23 |
 
 ## Related
 

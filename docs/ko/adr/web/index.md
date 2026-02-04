@@ -38,6 +38,7 @@ description: 웹 플랫폼(대시보드 및 API) 아키텍처 의사결정 기�
 | 23  | [윈도우 레벨 가상화 패턴](./23-window-level-virtualization.md)          | 2026-01-19 |
 | 24  | [구독 기간 일할 계산](./24-subscription-period-prorata.md)              | 2026-01-16 |
 | 25  | [OAuth 리턴 URL 처리](./25-oauth-return-url-handling.md)                | 2026-01-16 |
+| 26  | [Zustand 클라이언트 상태 관리](./26-zustand-client-state.md)            | 2026-01-23 |
 
 ## 관련 문서
 

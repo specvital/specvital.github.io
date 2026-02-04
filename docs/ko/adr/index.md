@@ -147,6 +147,7 @@ XX-brief-decision-title.md
 | 23  | [윈도우 레벨 가상화 패턴](./web/23-window-level-virtualization.md)          | Frontend      | 2026-01-19 |
 | 24  | [구독 기간 일할 계산](./web/24-subscription-period-prorata.md)              | Billing       | 2026-01-16 |
 | 25  | [OAuth 리턴 URL 처리](./web/25-oauth-return-url-handling.md)                | Security      | 2026-01-16 |
+| 26  | [Zustand 클라이언트 상태 관리](./web/26-zustand-client-state.md)            | Frontend      | 2026-01-23 |
 
 ## 프로세스
 

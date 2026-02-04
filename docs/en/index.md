@@ -114,6 +114,7 @@ Documentation of architectural decisions made during the development of Specvita
 - [Window-Level Virtualization Pattern](./adr/web/23-window-level-virtualization.md)
 - [Subscription Period Pro-rata Calculation](./adr/web/24-subscription-period-prorata.md)
 - [OAuth Return URL Handling](./adr/web/25-oauth-return-url-handling.md)
+- [Zustand Client State Management](./adr/web/26-zustand-client-state.md)
 
 ### [Tech Radar](./tech-radar.md)
 

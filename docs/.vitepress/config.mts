@@ -379,6 +379,10 @@ export default withMermaid({
                       text: "OAuth Return URL Handling",
                       link: "/en/adr/web/25-oauth-return-url-handling",
                     },
+                    {
+                      text: "Zustand Client State",
+                      link: "/en/adr/web/26-zustand-client-state",
+                    },
                   ],
                 },
               ],
@@ -644,6 +648,10 @@ export default withMermaid({
                     {
                       text: "OAuth 리턴 URL 처리",
                       link: "/ko/adr/web/25-oauth-return-url-handling",
+                    },
+                    {
+                      text: "Zustand 클라이언트 상태",
+                      link: "/ko/adr/web/26-zustand-client-state",
                     },
                   ],
                 },
