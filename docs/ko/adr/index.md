@@ -77,6 +77,7 @@ XX-brief-decision-title.md
 | 18  | [GitHub API 캐시 테이블](./18-github-api-cache-tables.md)                        | Database       | 2025-12-24 |
 | 19  | [계층적 스펙 문서 스키마](./19-hierarchical-spec-document-schema.md)             | Database       | 2026-01-12 |
 | 20  | [GitHub App 설치 스키마](./20-github-app-installation-schema.md)                 | Database       | 2026-01-19 |
+| 21  | [동시 요청 처리용 할당량 예약](./21-quota-reservation.md)                        | Billing        | 2026-02-01 |
 
 ### Core 리포지토리
 

@@ -171,6 +171,10 @@ export default withMermaid({
                   link: "/en/adr/20-github-app-installation-schema",
                 },
                 {
+                  text: "Quota Reservation",
+                  link: "/en/adr/21-quota-reservation",
+                },
+                {
                   text: "Core",
                   collapsed: true,
                   items: [
@@ -464,6 +468,10 @@ export default withMermaid({
                 {
                   text: "GitHub App 설치 스키마",
                   link: "/ko/adr/20-github-app-installation-schema",
+                },
+                {
+                  text: "할당량 예약",
+                  link: "/ko/adr/21-quota-reservation",
                 },
                 {
                   text: "Core",

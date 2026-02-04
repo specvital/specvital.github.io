@@ -50,6 +50,7 @@ Specvital 개발 중 내린 아키텍처 결정에 대한 문서.
 - [GitHub API 캐시 테이블](./adr/18-github-api-cache-tables.md)
 - [계층적 스펙 문서 스키마](./adr/19-hierarchical-spec-document-schema.md)
 - [GitHub App 설치 스키마](./adr/20-github-app-installation-schema.md)
+- [동시 요청 처리용 할당량 예약](./adr/21-quota-reservation.md)
 
 **[Core](./adr/core/)**
 

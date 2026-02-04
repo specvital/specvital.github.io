@@ -50,6 +50,7 @@ Documentation of architectural decisions made during the development of Specvita
 - [GitHub API Cache Tables](./adr/18-github-api-cache-tables.md)
 - [Hierarchical Spec Document Schema](./adr/19-hierarchical-spec-document-schema.md)
 - [GitHub App Installation Schema](./adr/20-github-app-installation-schema.md)
+- [Quota Reservation for Concurrent Requests](./adr/21-quota-reservation.md)
 
 **[Core](./adr/core/)**
 

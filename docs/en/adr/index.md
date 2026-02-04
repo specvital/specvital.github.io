@@ -77,6 +77,7 @@ XX-brief-decision-title.md
 | 18  | [GitHub API Cache Tables](./18-github-api-cache-tables.md)                             | Database       | 2025-12-24 |
 | 19  | [Hierarchical Spec Document Schema](./19-hierarchical-spec-document-schema.md)         | Database       | 2026-01-12 |
 | 20  | [GitHub App Installation Schema](./20-github-app-installation-schema.md)               | Database       | 2026-01-19 |
+| 21  | [Quota Reservation for Concurrent Requests](./21-quota-reservation.md)                 | Billing        | 2026-02-01 |
 
 ### Core Repository
 
