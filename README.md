@@ -1,9 +1,9 @@
 # Specvital Documentation
 
-Central documentation repository for the Specvital platform.
+> **This repository has been archived.** All code has been merged into the [kubrickcode/specvital](https://github.com/kubrickcode/specvital) monorepo. Please refer to the monorepo for the latest code, issues, and contributions.
 
-https://specvital.github.io
+## Migrated To
 
-## Deployment
+**[github.com/kubrickcode/specvital](https://github.com/kubrickcode/specvital)**
 
-Automatically deployed to GitHub Pages on push to `main` branch.
+This repository is no longer maintained. All future development happens in the monorepo above.
